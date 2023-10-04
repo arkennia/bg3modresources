@@ -5,7 +5,7 @@ title: Installing Mods
 - [Installing Mods using BG3ModManager](#installing-mods-using-bg3modmanager)
   - [Getting Started](#getting-started)
   - [Setting Up the Mod Manager](#setting-up-the-mod-manager)
-    - [Setting up bg3 Script Extender (Optional)](#setting-up-bg3-script-extender-optional)
+  - [Setting up bg3 Script Extender (Optional)](#setting-up-bg3-script-extender-optional)
   - [Installing .pak Mods](#installing-pak-mods)
   - [Installing Manual (Loose file) Mods](#installing-manual-loose-file-mods)
 
@@ -58,7 +58,7 @@ I am not responsible for breaking your game - this is at your own risk. Whenever
 
 Your Mod Manager should now be configured properly! Continue to the next section for how to install mods from Nexus. Specifically, mods that are .pak files. Loose file mods will come later.
 
-### Setting up bg3 Script Extender (Optional)
+## Setting up bg3 Script Extender (Optional)
 One of the most common dependencies for mods these days is the Script Extender. In short, it allows modders greater access to things within the game. Thankfully, bg3MM has an easy way to add this to your set up. Go to Tools-> Download and Extract Script Extender. It will automatically grab the files you need and put them in the correct places. The script extender automatically updates itself, so you should only have to do this the one time.
 ![se](../images/se.jpg)
 
