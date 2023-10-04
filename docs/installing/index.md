@@ -1,3 +1,7 @@
+---
+layout: page
+title: Installing Mods
+---
 # Installing Mods using BG3ModManager
 This page is based on [this](https://docs.google.com/document/d/16wq-ImbnHuHTO7Kzi7OZysZCJ1F_jVbXrwdxtB3h53Y/edit#heading=h.xk8qvx6nx9az) wonderful guide by Maze on Discord. As such, the guide is for installing bg3modmanager(not Vortex) on the Steam version of the game.
 
