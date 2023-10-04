@@ -1,6 +1,8 @@
 lsi: false
 safe: true
 source: /docs
+title: BG3 Mod Resources
+description: A collection of resources for modding Larian Studios' game Baldur's Gate 3.
 incremental: true
 remote_theme: pages-themes/midnight@v0.2.0
 plugins:
@@ -11,5 +13,5 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
-title: BG3 Mod Resources
-description: A collection of resources for modding Larian Studios' game Baldur's Gate 3.
+
+

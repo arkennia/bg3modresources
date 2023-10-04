@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Installing Mods
 ---
 # Installing Mods using BG3ModManager
