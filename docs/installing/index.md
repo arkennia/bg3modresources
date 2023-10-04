@@ -47,6 +47,10 @@ I am not responsible for breaking your game - this is at your own risk. Whenever
 
 Your Mod Manager should now be configured properly! Continue to the next section for how to install mods from Nexus. Specifically, mods that are .pak files. Loose file mods will come later.
 
+### Setting up bg3 Script Extender (Optional)
+One of the most common dependencies for mods these days is the Script Extender. In short, it allows modders greater access to things within the game. Thankfully, bg3MM has an easy way to add this to your set up. Go to Tools-> Download and Extract Script Extender. It will automatically grab the files you need and put them in the correct places. The script extender automatically updates itself, so you should only have to do this the one time.
+![se](../images/se.jpg)
+
 ## Installing .pak Mods
 1. The first thing you do is go to https://www.nexusmods.com/ and find a mod you want to install. 
 2. Once you find a mod you would like to download, go to the Files tab of the mod, and click __Manual Download__, *not* Mod Manager Download. Mod Manager download is for Vortex *only*.
@@ -75,4 +79,17 @@ Your Mod Manager should now be configured properly! Continue to the next section
     No other files should be present, and no folders of any kind. ***Only .pak files.***
 
 ## Installing Manual (Loose file) Mods
-WIP
+
+Manual, or Loose file mods are ones that do not come with a *.pak file. Usually it will be a zip archive with a single folder named "Data" in it. These are essentially mods that directly modify the game files in some way. These cannot be managed by BG3MM, and so be careful with adding too many at one time as it will become hard to debug any issues.
+
+There are three common places for these to be installed:
+
+1. Dropping the files into: `..\common\Baldurs Gate3\Data`
+2. Dropping them into:      `..\common\Baldurs Gate3\bin`
+3. Dropping them into:      `..\common\Baldurs Gate3\`
+
+Once you find the correct destination, simply drag and drop the folder into the correct location. Make sure you drag the Data/Generated/etc folder, not the entire directory for the mod itself.
+
+Whichever method is the correct one really depends on what mod you're trying to install. The best place to check if you don't know for certain is the mod's Description on Nexus.
+
+*Note: Some mods such as Party Limit Begone and Native Mods have a different process that you will need to make sure you read before installing.*
