@@ -38,9 +38,9 @@ I am not responsible for breaking your game - this is at your own risk. Whenever
    ![Preferences](../images/prefs.jpg)
 5. The two areas to note here are __Game Data Path__ and __Game Executable Path__. This must both be set properly for the Mod Manager to function.  
 *Make sure to save your preferences after completing this section and closing the window!*
-   * Common values for these are:
-    Data: C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\Data  
-    Executable: C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\bin\bg3.exe  
+   * Common values for these are:  
+    **Data**: C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\Data  
+    **Executable**: C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\bin\bg3.exe  
     
    * You can check this for yourself by going into to steam and selecting "Browse Local Files"
    ![LocalFiles](../images/locatefiles.jpg)
