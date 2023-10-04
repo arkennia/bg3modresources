@@ -21,6 +21,14 @@
 }
 
 @font-face {
+  font-family: "SourceCodeProMedium";
+  src: url("../fonts/SourceCodePro-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
   font-family: "SourceCodeProRegular";
   src: url("../fonts/SourceCodePro-Regular.ttf") format("truetype");
   font-weight: normal;
