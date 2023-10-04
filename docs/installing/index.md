@@ -68,7 +68,11 @@ Your Mod Manager should now be configured properly! Continue to the next section
 7. After dragging all the mods into the Active side, click the Save Load Order button(You can also use the Export Load Order button, they do the same thing.)  
    ![SaveLoadOrder](../images/saveloadorder.jpg)
    
-   When you hit this button, you should see a green message appear at the bottom saying it was sucessful. If it was not successful, please go to the Larian Studios Discord channel #bg3-mods-support and ask for assistance.
+   Notes:
+   * When you hit this button, you should see a green message appear at the bottom saying it was sucessful. If it was not successful, please go to the Larian Studios Discord channel #bg3-mods-support and ask for assistance.
+   * A common issue with mods showing as enabled but not actually working in game is the case of there being extraneous files in the mods folder.  
+    To make sure this is not the case, the *only* thing in the mods folder should be *.pak files.  
+    No other files should be present, and no folders of any kind. ***Only .pak files.***
 
 ## Installing Manual (Loose file) Mods
 WIP
