@@ -21,6 +21,7 @@ I am not responsible for breaking your game - this is at your own risk. Whenever
    
 4. Move the extracted folder somewhere you will remember, the desktop is always a good bet.
    * Do ***not*** place it in the game folder, or in any folders such as the Larian Studios in AppData. You will break something.
+
    * Do ***not*** remove the .exe or any of the files in the folder. Only move the folder in its entirety. They are all required for the mod manager to function properly.
    ![Files](../images/files.jpg)
 
@@ -38,7 +39,7 @@ I am not responsible for breaking your game - this is at your own risk. Whenever
 5. The two areas to note here are __Game Data Path__ and __Game Executable Path__. This must both be set properly for the Mod Manager to function.  
 *Make sure to save your preferences after completing this section and closing the window!*
    * Common values for these are:
-    Data: C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\Data
+    Data: C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\Data  
     Executable: C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\bin\bg3.exe  
     
    * You can check this for yourself by going into to steam and selecting "Browse Local Files"
