@@ -1,7 +1,8 @@
 lsi: false
 safe: true
-source: [your repo's top level directory]
+source: /docs
 incremental: false
+theme: midnight
 highlighter: rouge
 gist:
   noscript: false
