@@ -1,5 +1,4 @@
----
----
+@import url("./fonts.scss");
 
 section {
   max-width: 650px;
@@ -14,8 +13,7 @@ section {
     padding: 0 0 5px 0;
 
     h1 {
-      font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
+      font-family: "SourceCodePro", monospace;
       font-weight: normal;
       font-size: 40px;
       text-align: center;
@@ -24,8 +22,7 @@ section {
 
     p {
       color: #d7cfbe;
-      font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
+      font-family: "SourceCodeProLight", monospace;
       font-weight: normal;
       font-size: 18px;
       text-align: center;
@@ -45,8 +42,7 @@ section {
         padding: 0;
 
         li {
-          font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial,
-            sans-serif;
+          font-family: "SourceCodeProLight", monospace;
           font-weight: normal;
           list-style: none;
           display: inline;
@@ -80,8 +76,7 @@ section {
 
     .credits {
       font-size: 11px;
-      font-family: "OpenSansRegular", "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
+      font-family: "SourceCodePro", monospace;
       font-weight: normal;
       color: #696969;
       margin-top: -10px;
@@ -96,4 +91,5 @@ section {
     }
   }
 }
+
 @import "{{ site.theme }}";
