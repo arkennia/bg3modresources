@@ -10,7 +10,7 @@ I am not responsible for breaking your game - this is at your own risk. Whenever
 ## Getting Started
 1. Open up the github page for BG3 Mod Manager which can be found [here](https://github.com/LaughingLeader/BG3ModManager).
 2. Make sure you have run your game at least once to generate the necessary files.
-3. To get the latest version, scroll down to "Setup" and press "Grab the latest release.
+3. To get the latest version, scroll down to "Setup" and press "Grab the latest release."
    ![ReleaseImage](../../images/release.jpg)
    
    After selecting this option, it will download a zip file.
