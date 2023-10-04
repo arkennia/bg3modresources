@@ -3,7 +3,7 @@
 body {
     padding:0px 0 20px 0px;
     margin: 0px;
-    font:14px/1.5 "Source Code Pro", "Source Code Pro", Helvetica, Arial, sans-serif;
+    font:14px/1.5 "Source Code Pro", "Source Code Pro", monospace;
     color:#f0e7d5;
     font-weight: normal;
     background: #252525;
@@ -14,7 +14,7 @@ body {
   h1, h2, h3, h4, h5, h6 {
     color:#e8e8e8;
     margin:0 0 10px;
-    font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Source Code Pro', "Source Code Pro",monospace;
     font-weight: normal;
   }
 
@@ -42,7 +42,7 @@ body {
   h3 {
     font-size: 18px;
     line-height: 24px;
-    font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-family: "Source Code Pro", "Source Code Pro", monospace !important;
     font-weight: normal;
     color: #b6b6b6;
   }
@@ -69,7 +69,7 @@ body {
   }
 
   strong {
-    font-family: 'OpenSansBold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-family: "Source Code Pro", "Source Code Pro", monospace !important;
     font-weight: normal;
   }
 
@@ -92,7 +92,7 @@ body {
   }
 
   code {
-    font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
+    font-family: "Source Code Pro", "Source Code Pro", monospace;
     color:#efefef;
     font-size:13px;
     margin: 0 4px;
@@ -127,7 +127,7 @@ body {
     padding:5px 10px;
     border-bottom:1px solid #434343;
     color: #b6b6b6;
-    font-family: 'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-family: "Source Code Pro", "Source Code Pro", monospace !important;
     font-weight: normal;
   }
 
@@ -147,7 +147,7 @@ body {
 
   dt {
     color:#F0E7D5;
-    font-family: 'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-family: "Source Code Pro", "Source Code Pro", monospace !important;
     font-weight: normal;
   }
 
@@ -176,7 +176,7 @@ body {
         padding: 0;
 
         li {
-          font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-family: "Source Code Pro", "Source Code Pro", monospace;
           font-weight: normal;
           list-style: none;
           display: inline;
@@ -241,7 +241,7 @@ body {
       padding: 0 0 5px 0;
 
       h1 {
-        font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "Source Code Pro", "Source Code Pro", monospace;
         font-weight: normal;
         font-size: 40px;
         text-align: center;
@@ -250,7 +250,7 @@ body {
 
       p {
         color: #d7cfbe;
-        font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "Source Code Pro", "Source Code Pro", monospace;
         font-weight: normal;
         font-size: 18px;
         text-align: center;
@@ -258,7 +258,7 @@ body {
 
       .credits {
         font-size: 11px;
-        font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "Source Code Pro", "Source Code Pro", monospace;
         font-weight: normal;
         color: #696969;
         margin-top: -10px;
