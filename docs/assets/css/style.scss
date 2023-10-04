@@ -40,7 +40,8 @@ section {
 
       ul {
         list-style-type: none;
-        margin: 0;
+        display: table;
+        margin: 0 auto;
         padding: 0;
 
         li {
