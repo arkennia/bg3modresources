@@ -11,3 +11,5 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+title: BG3 Mod Resources
+description: A collection of resources for modding Larian Studios' game Baldur's Gate 3.
