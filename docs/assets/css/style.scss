@@ -6,7 +6,7 @@
 body {
   padding: 0px 0 20px 0px;
   margin: 0px;
-  font: 14px/1.5 "SourceCodePro", monospace;
+  font: 16px/1.5 "SourceCodePro", monospace;
   color: #f0e7d5;
   font-weight: normal;
   background: #252525;
@@ -335,24 +335,4 @@ section {
       }
     }
   }
-}
-#toc_container {
-  background: #2f2e2e none repeat scroll 0 0;
-  border: 1px solid #aaa;
-  display: table;
-  font-size: 16px;
-  margin-bottom: 1em;
-  padding: 5px;
-  width: auto;
-}
-
-.toc_title {
-  font-weight: 700;
-  text-align: center;
-}
-
-#toc_container li,
-#toc_container ul,
-#toc_container ul li {
-  list-style: outside none none !important;
 }
