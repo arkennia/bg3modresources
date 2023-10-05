@@ -30,3 +30,6 @@ Created by AnteMax to showcase how to make equipment with 3D edited assets. Note
 # Guides
 [Building a Class Mod](https://github.com/BG3-Community-Library-Team/BG3-Community-Library/wiki/Building-a-Class-Mod)  
 A guide by NellsRelo, creator of Community Library which is a repository full of helpful resources. This one in particular goes in depth on building your own class for the game.
+
+[Building a Race Mod](https://github.com/BG3-Community-Library-Team/BG3-Community-Library/wiki/Building-a-Race-Mod)  
+A guide by NellsRelo, creator of Community Library which is a repository full of helpful resources. This one in particular goes in depth on creating your own race for the game.
