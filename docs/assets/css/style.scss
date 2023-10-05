@@ -54,7 +54,11 @@ h5,
 h6 {
   color: #e8e8e8;
 }
-
+em {
+  font-family: "SourceCodeProBoldItalic", monospace;
+  font-weight: bold;
+  font-style: italic;
+}
 h3 {
   font-size: 18px;
   line-height: 24px;
