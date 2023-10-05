@@ -2,6 +2,7 @@
 layout: default
 title: Installing Mods
 ---
+Looking for troubleshooting help? Head over to [troubleshooting](/bg3modresources/installing/troubleshooting/).
 - [Installing Mods using BG3ModManager](#installing-mods-using-bg3modmanager)
   - [Getting Started](#getting-started)
   - [Setting Up the Mod Manager](#setting-up-the-mod-manager)
