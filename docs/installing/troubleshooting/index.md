@@ -20,8 +20,9 @@ Sometimes when you're having issues with crashes or mods not working properly, y
      * Generated
      * Mods
      * Public
-
+    
     ***Do not delete anything besides the 3 folders listed or you will have to verify/reinstall most of your game***
+    ![data](../../images/datafolder.jpg)
 3. Next, delete all folders in the `bin` folder which can generally be found at `C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\bin` however your specific path may be different. If you do not have any folders, skip this step.
    * Examples of folders that may be found here:
      * Native Mods
@@ -33,11 +34,17 @@ Sometimes when you're having issues with crashes or mods not working properly, y
      * Delete `bink2w64.dll`
      * Rename `bink2w64_original.dll` to `bink2w64.dll`
 
+    ![binfolder](../../images/binfolder.jpg)
+
    *Note: Don't panic if you cant find some of these, you may not have them.*
 
    ***Warning: If you installed the Party Limit Begone mod, you must also delete all of the `*.exe` files in the folder as well.***
 5. Delete `modsettings.lsx` which can generally be found at `%LOCALAPPDATA%\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public`. 
+   ![modsettings](../../images/modsettingsfile.jpg)
 6. Verify your game files through Steam.
+   * To do this in Steam:
+     * Right click Baldur's Gate, and select Properties. Then go to the Installed Files section and select verify.
+    ![Verify](../../images/verify.jpg)
    * If you do not use Steam, look up the correct way to do this for your platform.
 7. Wait for the verification to be done, do not worry if a bunch of files need to be replaced, thats normal.
 8. Open up the game without installing any mods and try to get into character creation and the nautiloid. If everythign went according to plan this should work without issue!
