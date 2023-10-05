@@ -3,10 +3,9 @@ safe: true
 source: /docs
 title: BG3 Mod Resources
 description: A collection of resources for modding Larian Studios' game Baldur's Gate 3.
-incremental: false
+incremental: true
 remote_theme: pages-themes/midnight@v0.2.0
 plugins:
-- jekyll-toc
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 highlighter: rouge
 gist:
