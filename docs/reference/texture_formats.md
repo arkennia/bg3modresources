@@ -38,6 +38,8 @@ DDS Export Settings:
 
 
 Mask Map:  
-These again depend on the type of mask you're creating. I'll be collecting as much info for different mask maps here as I find.
-BC5 Unsigned (Paint.NET) / BC5 ATI2 (GIMP) for Horn masks
-BC7 RGBA 8bpp | Explicit alpha (Photoshop) / BC7 sRGB or BC7 Linear (Paint.NET) for Shared Scars MSK (thanks to aurebuen for the info)
+These again depend on the type of mask you're creating.  
+BC5 Unsigned (Paint.NET)  
+BC5 ATI2 (GIMP) for Horn masks  
+BC7 RGBA 8bpp | Explicit alpha (Photoshop)  
+BC7 sRGB or BC7 Linear (Paint.NET) for Shared Scars MSK  
