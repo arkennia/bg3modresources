@@ -42,3 +42,6 @@ A guide by NellsRelo, creator of Community Library which is a repository full of
 
 [Creating Icons](https://docs.google.com/document/d/1yS1l2N8seKlEmp4MxD3WptsEOb8ZmKxIhG3m9MT5GKg/edit)  
 A guide from ID-10T Bot on how to create icons for spells/skills/items.
+
+[Recoloring Vanilla Weapons](/bg3modresources/creating/guides/recoloring)  
+A guide by me for recoloring vanilla weapons.
