@@ -6,6 +6,10 @@ title: Creating Your Own Mods
 
 See the [references](/bg3modresources/reference) for things like functions and scripting resources.
 
+- [Tools](#tools)
+- [Example Mods](#example-mods)
+- [Guides](#guides)
+
 # Tools
 * A text editor(I recommend [VScode](https://code.visualstudio.com/).)
   * There is a VSCode formatter/highlighter by dev_chromosome16 for the text files which can be found [here](https://marketplace.visualstudio.com/items?itemName=chromosome16.bg3-text-support).
