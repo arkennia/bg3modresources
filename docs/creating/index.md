@@ -36,5 +36,5 @@ A guide by NellsRelo, creator of Community Library which is a repository full of
 [Building a Race Mod](https://github.com/BG3-Community-Library-Team/BG3-Community-Library/wiki/Building-a-Race-Mod)  
 A guide by NellsRelo, creator of Community Library which is a repository full of helpful resources. This one in particular goes in depth on creating your own race for the game.
 
-[Creating Icons](https://docs.google.com/document/d/1yS1l2N8seKlEmp4MxD3WptsEOb8ZmKxIhG3m9MT5GKg/edit)
+[Creating Icons](https://docs.google.com/document/d/1yS1l2N8seKlEmp4MxD3WptsEOb8ZmKxIhG3m9MT5GKg/edit)  
 A guide from ID-10T Bot on how to create icons for spells/skills/items.
