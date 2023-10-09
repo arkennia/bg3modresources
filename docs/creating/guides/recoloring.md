@@ -18,7 +18,12 @@ Links to the tools can be found on [here](/bg3modresources/creating/#tools)
 Also you will need to create a specific folder structure. I have released a python script that can generate a basic structure, but I will also write it out here.
 
 ```
-<ModName>                                                                                               ├───Generated                                                                                                           │   └───Public                                                                                                          │       └───Shared                                                                                                      │           └───Assets                                                                                                  │               └───Weapons                                                                                             │                                                                                       ├───Localization
+<ModName>                                                                                               ├───Generated                                                                                                           
+│   └───Public                                                                                                          
+│       └───Shared                                                                                                      
+│           └───Assets                                                                                                  
+│               └───Weapons                                                                                             │                                                                                       
+├───Localization
 │   └───English
 ├───Mods
 │   └───<ModName>                                                                                             
