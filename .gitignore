@@ -1,3 +1,5 @@
 .vscode
 *pycache*
 gentest
+*.dds
+*.DDS

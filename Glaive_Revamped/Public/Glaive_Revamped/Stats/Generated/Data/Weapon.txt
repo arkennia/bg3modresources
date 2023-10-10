@@ -1,0 +1,6 @@
+new entry "FAA_Glaive_Revamped"
+	type "Weapon"
+	using "WPN_Glaive_2"
+		data "RootTemplate" "d1301ddb-f75c-4c8c-9258-c6cdb4ee9d3e"
+		data "DefaultBoosts" "WeaponEnchantment(2);WeaponProperty(Magical);WeaponDamage(1d4,Thunder)"
+		data "Weapon Properties" "Heavy;Reach;Twohanded;Melee;Dippable;Magical"

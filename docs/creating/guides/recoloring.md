@@ -232,24 +232,24 @@ We can fill out some of the basic information here, and generate our UUID, but a
 Now my file will have these changes:  
 ```xml
 <attribute id="CanShootThrough" type="bool" value="True" />
-<attribute id="Description" type="TranslatedString" handle="hdd52a424gaeeag4cedg8f43gba7eed9a8e13" version="1" /> 
-<attribute id="DisplayName" type="TranslatedString" handle="hfc497768g1352g4f5agacbegdd8fcf52e613" version="1" /> 
-<attribute id="EquipmentTypeID" type="guid" value="" />
+<attribute id="Description" type="TranslatedString" handle="hdd52a424gaeeag4cedg8f43gba7eed9a8e13" version="1" /> Handle from localization file.
+<attribute id="DisplayName" type="TranslatedString" handle="hfc497768g1352g4f5agacbegdd8fcf52e613" version="1" /> Handle from localization file.
+<attribute id="EquipmentTypeID" type="guid" value="5e004b79-461d-4617-bb0f-eef0e0ae1232" />
 <attribute id="Flag" type="int64" value="0" />
-<attribute id="Icon" type="FixedString" value="" />
+<attribute id="Icon" type="FixedString" value="Item_WPN_HUM_Glaive_A_2" />
 <attribute id="IsInspector" type="bool" value="True" />
 <attribute id="LevelName" type="FixedString" value="" />
 <attribute id="LevelOverride" type="int64" value="-1" />
-<attribute id="MapKey" type="FixedString" value="a619eb76-475b-4f36-a4ef-542d931f05ec" />
+<attribute id="MapKey" type="FixedString" value="d1301ddb-f75c-4c8c-9258-c6cdb4ee9d3e" /> Generate new UUID.
 <attribute id="Name" type="LSString" value="FAA_Glaive_Revamped" />
-<attribute id="ParentTemplateId" type="FixedString" value="" />
-<attribute id="PhysicsTemplate" type="FixedString" value="" />
+<attribute id="ParentTemplateId" type="FixedString" value="99f3b2d9-e03d-4cd5-9a67-5435a95682da" />
+<attribute id="PhysicsTemplate" type="FixedString" value="5a6acc22-4359-0d52-0a08-a6ad2fb16f21" />
 <attribute id="Race" type="int8" value="0" />
 <attribute id="ReadinessFlags" type="uint32" value="144" />
 <attribute id="Stats" type="FixedString" value="FAA_Glaive_Revamped" />
 <attribute id="Tooltip" type="uint8" value="2" />
 <attribute id="Type" type="FixedString" value="item" />
-<attribute id="VisualTemplate" type="FixedString" value="" />
+<attribute id="VisualTemplate" type="FixedString" value="59c00a73-7168-4444-bfb0-881cee72a4f2" />
 <attribute id="WalkThrough" type="bool" value="True" />
 <attribute id="_OriginalFileVersion_" type="int64" value="144115188075855912" />
 ```
@@ -544,6 +544,13 @@ This is where we tell the game how to use our textures.
                     <attribute id="ExportAsPreset" type="bool" value="True" />
                     <attribute id="GroupName" type="FixedString" value="" />
                     <attribute id="ParameterName" type="FixedString" value="GlowIntensity" />
+                    <attribute id="StaticForward" type="uint16" value="12" />
+                    <attribute id="StaticInstancedForward" type="uint16" value="12" />
+                    <attribute id="StaticDeferred" type="uint16" value="8" />
+                    <attribute id="StaticInstancedDeferred" type="uint16" value="8" />
+                    <attribute id="StaticEmissive" type="uint16" value="12" />
+                    <attribute id="StaticInstancedEmissive" type="uint16" value="12" />
+                    <attribute id="StaticBake" type="uint16" value="20" />
                     <attribute id="Value" type="float" value="3" />
                 </node>
                 <node id="ScalarParameters">
@@ -591,6 +598,11 @@ This is where we tell the game how to use our textures.
                     <attribute id="IsColor" type="bool" value="False" />
                     <attribute id="ParameterName" type="FixedString" value="Glow_Color" />
                     <attribute id="Value" type="fvec3" value="0.1360985 0.5113978 1" />
+                    <attribute id="StaticForward" type="uint16" value="0" />
+                    <attribute id="StaticInstancedForward" type="uint16" value="0" />
+                    <attribute id="StaticEmissive" type="uint16" value="0" />
+                    <attribute id="StaticInstancedEmissive" type="uint16" value="0" />
+                    <attribute id="StaticBake" type="uint16" value="0" />
                 </node>
                 <node id="Texture2DParameters">
                     <attribute id="Enabled" type="bool" value="True" />
