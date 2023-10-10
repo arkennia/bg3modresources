@@ -535,7 +535,7 @@ This is where we tell the game how to use our textures.
             <attribute id="Localized" type="bool" value="False" />
             <attribute id="MaterialType" type="uint8" value="4" />
             <attribute id="Name" type="LSString" value="WPN_HUM_Glaive_Revamped" />
-            <attribute id="SourceFile" type="LSString" value="Public/Shared/Assets/Materials/Base/Base_GradientMapping_2G.lsf" />
+            <attribute id="SourceFile" type="LSString" value="Public/Shared/Assets/Materials/Base/Base.lsf" />
             <attribute id="_OriginalFileVersion_" type="int64" value="144115196665790673" />
             <children>
                 <node id="ScalarParameters">
@@ -553,42 +553,12 @@ This is where we tell the game how to use our textures.
                     <attribute id="StaticBake" type="uint16" value="20" />
                     <attribute id="Value" type="float" value="3" />
                 </node>
-                <node id="ScalarParameters">
-                    <attribute id="BaseValue" type="float" value="0" />
-                    <attribute id="Enabled" type="bool" value="True" />
-                    <attribute id="ExportAsPreset" type="bool" value="True" />
-                    <attribute id="GroupName" type="FixedString" value="1Gradient" />
-                    <attribute id="ParameterName" type="FixedString" value="GradientIndex" />
-                    <attribute id="Value" type="float" value="1" />
-                </node>
-                <node id="ScalarParameters">
-                    <attribute id="BaseValue" type="float" value="32" />
-                    <attribute id="Enabled" type="bool" value="True" />
-                    <attribute id="ExportAsPreset" type="bool" value="True" />
-                    <attribute id="GroupName" type="FixedString" value="1Gradient" />
-                    <attribute id="ParameterName" type="FixedString" value="NumberOfGradients" />
-                    <attribute id="Value" type="float" value="32" />
-                </node>
                 <node id="Texture2DParameters">
                     <attribute id="Enabled" type="bool" value="True" />
                     <attribute id="ExportAsPreset" type="bool" value="True" />
                     <attribute id="GroupName" type="FixedString" value="" />
                     <attribute id="ID" type="FixedString" value="eecd93b3-a72b-9cfc-507e-067f922b3601" />
                     <attribute id="ParameterName" type="FixedString" value="glowmap" />
-                </node>
-                <node id="Texture2DParameters">
-                    <attribute id="Enabled" type="bool" value="True" />
-                    <attribute id="ExportAsPreset" type="bool" value="True" />
-                    <attribute id="GroupName" type="FixedString" value="0Textures" />
-                    <attribute id="ID" type="FixedString" value="a8e4c385-6030-b4ab-9e3b-e1400124262c" />
-                    <attribute id="ParameterName" type="FixedString" value="MSK" />
-                </node>
-                <node id="Texture2DParameters">
-                    <attribute id="Enabled" type="bool" value="True" />
-                    <attribute id="ExportAsPreset" type="bool" value="True" />
-                    <attribute id="GroupName" type="FixedString" value="0Textures" />
-                    <attribute id="ID" type="FixedString" value="a90992f1-5dbf-9893-dba2-35386614d20d" />
-                    <attribute id="ParameterName" type="FixedString" value="Gradients" />
                 </node>
                 <node id="Vector3Parameters">
                     <attribute id="BaseValue" type="fvec3" value="0 0.7962012 1" />
@@ -603,6 +573,14 @@ This is where we tell the game how to use our textures.
                     <attribute id="StaticEmissive" type="uint16" value="0" />
                     <attribute id="StaticInstancedEmissive" type="uint16" value="0" />
                     <attribute id="StaticBake" type="uint16" value="0" />
+                </node>
+                <node id="Texture2DParameters">
+                    <attribute id="Enabled" type="bool" value="False" />
+                    <attribute id="ExportAsPreset" type="bool" value="True" />
+                    <attribute id="GroupName" type="FixedString" value="" />
+                    <attribute id="ID" type="FixedString" value="9dc5807b-3697-4b8f-ab0f-b9c5c1bd7010" />
+                    <attribute id="IgnoreTexelDensity" type="bool" value="True" />
+                    <attribute id="ParameterName" type="FixedString" value="" />
                 </node>
                 <node id="Texture2DParameters">
                     <attribute id="Enabled" type="bool" value="True" />
@@ -695,3 +673,11 @@ The changes are as follows:
 #### Final Step
 
 Add the ID of the VisualBank entry to the VisualTemplate field of the RootTemplate.
+
+Now drag the main folder into the big square that says to drag mod workspaces into it. This will build your mod. Now install it and test!
+
+And yes, it will look vanilla at this stage. Now that you have everything set up, you can start changing colors on the basemap, and it will reflect in game.
+
+I changed the blade to black, as can be seen here, just to make it obvious:
+![recolor](../../images/recoloring/recolor.png)
+
