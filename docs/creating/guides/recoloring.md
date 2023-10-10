@@ -468,7 +468,7 @@ The contents will start out with:
 </save>
 ```
 
-#### Texture Bank
+### Texture Bank
 
 In the texturebank, we set our file names, generate new UUIDs for the textures, and set the height and width of the textures.
 
@@ -521,7 +521,7 @@ When finished, it will look something like this
 ```
 One texture per image, and we have the BM, the NM and the PM. Make sure to generate new UUIDs and the texture dimensions are correct!
 
-#### Material Bank
+### Material Bank
 
 This is where we tell the game how to use our textures. 
 
@@ -615,7 +615,7 @@ The steps here are as follows:
 3. Generate a UUID for the ID field in the material.  
 *Notes: The SourceFile entry is tricky and is beyond the scope of this guide. I would head to the discord for questions if everything else looks right and it still won't work. Also, for the exact layout of a specific materialbank entry, compare to the vanilla item's version in its merged.lsx file. There is no one size fits all, unfortunately.*
 
-#### VisualBank
+### VisualBank
 
 This is by far the easiest step, since it is very little you actually change from the original.
 ```xml
@@ -668,7 +668,7 @@ The changes are as follows:
 2. Change the name. I changed it to WPN_HUM_Glaive_Revamped
 3. Change the MaterialID to the UUID in the ID field of the material in the Material bank, so here it is `dd6ec619-c9b3-4016-a38b-601e6e72af3d`.
 
-#### Final Step
+### Final Step
 
 Add the ID of the VisualBank entry to the VisualTemplate field of the RootTemplate.
 
