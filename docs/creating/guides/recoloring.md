@@ -695,6 +695,8 @@ Now drag the main folder into the big square that says to drag mod workspaces in
 
 And yes, it will look vanilla at this stage. Now that you have everything set up, you can start changing colors on the basemap, and it will reflect in game.
 
-I changed the blade to black, as can be seen here, just to make it obvious:
+For the actual texturing, use GIMP with the dds plugin and make your edits on the basemap, and export it using the BC1/DXT5 compression, and generate mipmaps. In advanced set the filters to Kaiser.
+
+I changed the blade to black, as can be seen here, just to make it obvious:  
 ![recolor](../../images/recoloring/recolor.png)
 
