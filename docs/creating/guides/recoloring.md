@@ -2,6 +2,24 @@
 layout: default
 title: Recoloring Vanilla Weapons Tutorial
 ---
+- [Recoloring Vanilla Weapons](#recoloring-vanilla-weapons)
+  - [Setting Up Your Workspace](#setting-up-your-workspace)
+  - [How to Generate new UUIDs and Handles](#how-to-generate-new-uuids-and-handles)
+  - [Meta.Lsx](#metalsx)
+  - [Localization File](#localization-file)
+  - [RootTemplate Creation](#roottemplate-creation)
+    - [Basic Information](#basic-information)
+    - [ParentTemplateID, PhysicsTemplate, EquipmentTypeID and Icon](#parenttemplateid-physicstemplate-equipmenttypeid-and-icon)
+    - [Notes on VisualTemplate](#notes-on-visualtemplate)
+  - [Stats](#stats)
+  - [Creating the VisualTemplate](#creating-the-visualtemplate)
+    - [Finding the Original Textures](#finding-the-original-textures)
+    - [Unpacking and Saving the Original Textures](#unpacking-and-saving-the-original-textures)
+    - [Creating the Texture, Material, and Visual Banks](#creating-the-texture-material-and-visual-banks)
+    - [Texture Bank](#texture-bank)
+    - [Material Bank](#material-bank)
+    - [VisualBank](#visualbank)
+    - [Final Step](#final-step)
 
 # Recoloring Vanilla Weapons
 Below is a guide for changing the textures of vanilla weapons. I'll do my best to include as much information as possible, but if you get stuck, head on over to #bg3-mods-general in the Larian Studios Discord server. Even if I'm not around, they should be able to answer any questions.  
