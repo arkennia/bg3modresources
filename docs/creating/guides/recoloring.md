@@ -345,7 +345,6 @@ First things first, we need to find the original textures for our weapon. This w
 ![indexsearch](../../images/recoloring/indexsearch.png)
 4. Once it opens, you'll see a large wall of text. Use Ctrl + F and enter the VisualTemplate ID into the bar. You're looking for an entry that looks like this:
 ```xml
-...
 <node id="Resource">
     <attribute id="AttachBone" type="FixedString" value="" />
     <attribute id="AttachmentSkeletonResource" type="FixedString" value="" />
@@ -384,7 +383,6 @@ First things first, we need to find the original textures for our weapon. This w
             <attribute id="Physics" type="FixedString" value="" />
             <attribute id="Slot" type="FixedString" value="" />
         </node>
-...
 ```
 
 This is the VisualTemplate for the weapon, and you can verify that by looking at the name. It also gives the path of the GR2 file, which is the 3D model. We don't need that, however. 
