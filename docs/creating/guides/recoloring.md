@@ -343,7 +343,8 @@ First things first, we need to find the original textures for our weapon. This w
 2. Paste the UUID into the search bar and hit Enter.
 3. Once it finishes searching, you'll see a list of entries with that present. We want one that is either in `Shared` or `Gustav`. In this case, it is in `Shared`. Once you select the file, click 'Convert and Open." 
 ![indexsearch](../../images/recoloring/indexsearch.png)
-4. Once it opens, you'll see a large wall of text. Use Ctrl + F and enter the VisualTemplate ID into the bar. You're looking for an entry that looks like this:
+4. Once it opens, you'll see a large wall of text. Use Ctrl + F and enter the VisualTemplate ID into the bar. You're looking for an entry that looks like this:  
+
 ```xml
 <node id="Resource">
     <attribute id="AttachBone" type="FixedString" value="" />
@@ -387,7 +388,7 @@ First things first, we need to find the original textures for our weapon. This w
 
 This is the VisualTemplate for the weapon, and you can verify that by looking at the name. It also gives the path of the GR2 file, which is the 3D model. We don't need that, however. 
 
-The first thing we need here is the `MaterialID`, which will get us one step closer to finding the textures! Here it is `83b29b95-838b-4ede-be76-d741249adce9`. Using CTRL-F again, search for the ID in the file.
+The first thing we need here is the `MaterialID`, which will get us one step closer to finding the textures! Here it is `83b29b95-838b-4ede-be76-d741249adce9`. Using CTRL-F again, search for the ID in the file.  
 ```xml
 <node id="Resource">
     <attribute id="DiffusionProfileUUID" type="FixedString" value="" />
