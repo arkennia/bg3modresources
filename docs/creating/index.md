@@ -20,6 +20,8 @@ See the [references](/bg3modresources/reference) for things like functions and s
   * Substance Painter
 * 3D Modeling Tools ([Blender](https://www.blender.org/) is a good free one)
   * Norbyte created [this](https://github.com/Norbyte/dos2de_collada_exporter) plugin for Blender for working with the game files.
+  * Padme's [Blender Addons](https://www.nexusmods.com/baldursgate3/mods/346?tab=files)
+    * The LOD one in particular is important.
 * [BG3 Script Extender](https://github.com/Norbyte/bg3se)
 * [BG3 Modders Multitool](https://github.com/ShinyHobo/BG3-Modders-Multitool)
 * [ConverterApp/LSLib](https://github.com/Norbyte/lslib)
@@ -46,3 +48,7 @@ A guide from ID-10T Bot on how to create icons for spells/skills/items.
 
 [Recoloring Vanilla Weapons](/bg3modresources/creating/guides/recoloring)  
 A guide by me for recoloring vanilla weapons.
+
+[Multitool Mod Workspace Format](https://github.com/ShinyHobo/BG3-Modders-Multitool/wiki/Mod-Workspace-Structure)  
+Multitool Wiki page on how to set up your mod workspace for auto conversion and other handy tips!  
+  
