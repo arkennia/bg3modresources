@@ -5,7 +5,7 @@ title: Recoloring Vanilla Weapons Tutorial
 - [Recoloring Vanilla Weapons](#recoloring-vanilla-weapons)
   - [Setting Up Your Workspace](#setting-up-your-workspace)
   - [How to Generate new UUIDs and Handles](#how-to-generate-new-uuids-and-handles)
-  - [Meta.Lsx](#metalsx)
+  - [Meta.lsx](#metalsx)
   - [Localization File](#localization-file)
   - [RootTemplate Creation](#roottemplate-creation)
     - [Basic Information](#basic-information)
@@ -71,9 +71,9 @@ Before we really get into the creation of the mod, the first thing that you shou
 2. To generate a new UUID, simply click the Generate button, and then click inside the box. It will copy the UUID to the ckeyboard. To generate handles, simply check the Handle box and repeat the same process as with UUIDs.  
     *Note: Make sure to only have the Handle box checked when generating handles for Localization.*
 
-## Meta.Lsx
+## Meta.lsx
 
-The very first file to edit will me the `meta.lsx` file inside of the folder `Glaive_Revamped\Mods\Glaive_Revamped\meta.lsx`. This is where the general information about your mod is stored. Here are the contents of the file:  
+The very first file to edit will be the `meta.lsx` file inside of the folder `Glaive_Revamped\Mods\Glaive_Revamped\meta.lsx`. This is where the general information about your mod is stored. Here are the contents of the file:  
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
     <save>
