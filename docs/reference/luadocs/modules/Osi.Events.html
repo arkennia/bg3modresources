@@ -1,0 +1,8774 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>Osi.Events</strong></li>
+  <li><a href="../modules/Osi.html">Osi</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Osi.Events</code></h1>
+<p></p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Activated">Osi.Activated (object)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ActorSpeakerIndexChanged">Osi.ActorSpeakerIndexChanged (instanceID, player, oldIndex, newIndex)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.AddedTo">Osi.AddedTo (object, inventoryHolder, addType)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.AnimationEvent">Osi.AnimationEvent (object, eventName, wasFromLoad)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.AppearTeleportFailed">Osi.AppearTeleportFailed (character, appearEvent)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ApprovalRatingChangeAttempt">Osi.ApprovalRatingChangeAttempt (ratingOwner, ratedEntity, attemptedApprovalChange, clampedApprovalChange, newApproval)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ApprovalRatingChanged">Osi.ApprovalRatingChanged (ratingOwner, ratedEntity, newApproval)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ArmedTrapUsed">Osi.ArmedTrapUsed (character, item)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ArmorSetChanged">Osi.ArmorSetChanged (character, eArmorSet)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.AttachedToPartyGroup">Osi.AttachedToPartyGroup (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.AttackedBy">Osi.AttackedBy (defender, attackerOwner, attacker2, damageType, damageAmount, damageCause, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.AttemptedDisarm">Osi.AttemptedDisarm (disarmableItem, character, itemUsedToDisarm, bool)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.AutomatedDialogEnded">Osi.AutomatedDialogEnded (dialog, instanceID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.AutomatedDialogForceStopping">Osi.AutomatedDialogForceStopping (dialog, instanceID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.AutomatedDialogRequestFailed">Osi.AutomatedDialogRequestFailed (dialog, instanceID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.AutomatedDialogStarted">Osi.AutomatedDialogStarted (dialog, instanceID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.BackgroundGoalFailed">Osi.BackgroundGoalFailed (character, goal)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.BackgroundGoalRewarded">Osi.BackgroundGoalRewarded (character, goal)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.BaseFactionChanged">Osi.BaseFactionChanged (target, oldFaction, newFaction)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CameraReachedNode">Osi.CameraReachedNode (spline, character, event, index, last)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CanBeLootedCapabilityChanged">Osi.CanBeLootedCapabilityChanged (lootingTarget, canBeLooted)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CastSpell">Osi.CastSpell (caster, spell, spellType, spellElement, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CastSpellFailed">Osi.CastSpellFailed (caster, spell, spellType, spellElement, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CastedSpell">Osi.CastedSpell (caster, spell, spellType, spellElement, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ChangeAppearanceCancelled">Osi.ChangeAppearanceCancelled (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ChangeAppearanceCompleted">Osi.ChangeAppearanceCompleted (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterDisarmed">Osi.CharacterDisarmed (character, item, slotName)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterJoinedParty">Osi.CharacterJoinedParty (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterLeftParty">Osi.CharacterLeftParty (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterLoadedInPreset">Osi.CharacterLoadedInPreset (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterLootedCharacter">Osi.CharacterLootedCharacter (player, lootedCharacter)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterMadePlayer">Osi.CharacterMadePlayer (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterMoveFailedUseJump">Osi.CharacterMoveFailedUseJump (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterMoveToAndTalkFailed">Osi.CharacterMoveToAndTalkFailed (character, target, moveID, failureReason)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterMoveToAndTalkRequestDialog">Osi.CharacterMoveToAndTalkRequestDialog (character, target, dialog, moveID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterMoveToCancelled">Osi.CharacterMoveToCancelled (character, moveID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterOnCrimeSensibleActionNotification">Osi.CharacterOnCrimeSensibleActionNotification (character, crimeRegion, crimeID, priortiyName, primaryDialog, criminal1, criminal2, criminal3, criminal4, isPrimary)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterPickpocketFailed">Osi.CharacterPickpocketFailed (player, npc)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterPickpocketSuccess">Osi.CharacterPickpocketSuccess (player, npc, item, itemTemplate, amount, goldValue)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterReservedUserIDChanged">Osi.CharacterReservedUserIDChanged (character, oldUserID, newUserID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterSelectedAsBestUnavailableFallbackLead">Osi.CharacterSelectedAsBestUnavailableFallbackLead (character, crimeRegion, unavailableForCrimeID, busyCrimeID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterSelectedClimbOn">Osi.CharacterSelectedClimbOn (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterSelectedForUser">Osi.CharacterSelectedForUser (character, userID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterStoleItem">Osi.CharacterStoleItem (character, item, itemRootTemplate, x, y, z, oldOwner, srcContainer, amount, goldValue)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CharacterTagEvent">Osi.CharacterTagEvent (character, tag, event)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Closed">Osi.Closed (item)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CombatEnded">Osi.CombatEnded (combatGuid)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CombatPaused">Osi.CombatPaused (combatGuid)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CombatResumed">Osi.CombatResumed (combatGuid)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CombatRoundStarted">Osi.CombatRoundStarted (combatGuid, round)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CombatStarted">Osi.CombatStarted (combatGuid)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Combined">Osi.Combined (item1, item2, item3, item4, item5, character, newItem)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CompanionSelectedForUser">Osi.CompanionSelectedForUser (character, userID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CrimeDisabled">Osi.CrimeDisabled (character, crime)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CrimeEnabled">Osi.CrimeEnabled (character, crime)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CrimeIsRegistered">Osi.CrimeIsRegistered (victim, crimeType, crimeID, evidence, criminal1, criminal2, criminal3, criminal4)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CrimeProcessingStarted">Osi.CrimeProcessingStarted (crimeID, actedOnImmediately)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CriticalHitBy">Osi.CriticalHitBy (defender, attackOwner, attacker, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.CustomBookUIClosed">Osi.CustomBookUIClosed (character, bookName)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DLCUpdated">Osi.DLCUpdated (dlc, userID, installed)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Deactivated">Osi.Deactivated (object)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DeathSaveStable">Osi.DeathSaveStable (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DestroyedBy">Osi.DestroyedBy (item, destroyer, destroyerOwner, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DestroyingBy">Osi.DestroyingBy (item, destroyer, destroyerOwner, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DetachedFromPartyGroup">Osi.DetachedFromPartyGroup (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DialogActorJoinFailed">Osi.DialogActorJoinFailed (dialog, instanceID, actor)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DialogActorJoined">Osi.DialogActorJoined (dialog, instanceID, actor, speakerIndex)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DialogActorLeft">Osi.DialogActorLeft (dialog, instanceID, actor, instanceEnded)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DialogAttackRequested">Osi.DialogAttackRequested (target, player)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DialogEnded">Osi.DialogEnded (dialog, instanceID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DialogForceStopping">Osi.DialogForceStopping (dialog, instanceID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DialogRequestFailed">Osi.DialogRequestFailed (dialog, instanceID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DialogRollResult">Osi.DialogRollResult (character, success, dialog, isDetectThoughts, criticality)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DialogStartRequested">Osi.DialogStartRequested (target, player)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DialogStarted">Osi.DialogStarted (dialog, instanceID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DialogueCapabilityChanged">Osi.DialogueCapabilityChanged (character, isEnabled)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Died">Osi.Died (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DifficultyChanged">Osi.DifficultyChanged (difficultyLevel)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DisappearOutOfSightToCancelled">Osi.DisappearOutOfSightToCancelled (character, moveID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DoorTemplateClosing">Osi.DoorTemplateClosing (itemTemplate, item2, character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DownedChanged">Osi.DownedChanged (character, isDowned)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DroppedBy">Osi.DroppedBy (object, mover)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.DualEntityEvent">Osi.DualEntityEvent (object1, object2, event)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Dying">Osi.Dying (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.EndTheDayRequested">Osi.EndTheDayRequested (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.EnterCombatFailed">Osi.EnterCombatFailed (opponentLeft, opponentRight)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.EnteredChasm">Osi.EnteredChasm (object, cause, chasm, fallbackPosX, fallbackPosY, fallbackPosZ)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.EnteredCombat">Osi.EnteredCombat (object, combatGuid)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.EnteredForceTurnBased">Osi.EnteredForceTurnBased (object)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.EnteredLevel">Osi.EnteredLevel (object, objectRootTemplate, level)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.EnteredSharedForceTurnBased">Osi.EnteredSharedForceTurnBased (object, zoneId)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.EnteredTrigger">Osi.EnteredTrigger (character, trigger)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.EntityEvent">Osi.EntityEvent (object, event)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.EquipFailed">Osi.EquipFailed (item, character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Equipped">Osi.Equipped (item, character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.EscortGroupLeaderChanged">Osi.EscortGroupLeaderChanged (oldLeader, newLeader, group)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.FailedToLoadItemInPreset">Osi.FailedToLoadItemInPreset (character, originalItem, level, newItem)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Falling">Osi.Falling (entity, cause)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Fell">Osi.Fell (entity, cause)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.FlagCleared">Osi.FlagCleared (flag, speaker, dialogInstance)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.FlagLoadedInPresetEvent">Osi.FlagLoadedInPresetEvent (object, flag)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.FlagSet">Osi.FlagSet (flag, speaker, dialogInstance)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.FleeFromCombat">Osi.FleeFromCombat (participant, combatGuid)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.FollowerCantUseItem">Osi.FollowerCantUseItem (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ForceDismissCompanion">Osi.ForceDismissCompanion (companion)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ForceMoveEnded">Osi.ForceMoveEnded (source, target, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ForceMoveStarted">Osi.ForceMoveStarted (source, target, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.GainedControl">Osi.GainedControl (target)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.GameBookInterfaceClosed">Osi.GameBookInterfaceClosed (item, character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.GameModeStarted">Osi.GameModeStarted (gameMode, isEditorMode, isStoryReload)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.GameOption">Osi.GameOption (key, value)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.GoldChanged">Osi.GoldChanged (inventoryHolder, changeAmount)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.GotUp">Osi.GotUp (target)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.HappyWithDeal">Osi.HappyWithDeal (character, trader, characterValue, traderValue)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.HenchmanAborted">Osi.HenchmanAborted (player)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.HenchmanSelected">Osi.HenchmanSelected (player, hireling)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.HitProxy">Osi.HitProxy (proxy, target, attackerOwner, attacker2, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.HitpointsChanged">Osi.HitpointsChanged (entity, percentage)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.InstanceDialogChanged">Osi.InstanceDialogChanged (instanceID, oldDialog, newDialog, oldDialogStopping)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.InteractionCapabilityChanged">Osi.InteractionCapabilityChanged (character, isEnabled)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.InteractionFallback">Osi.InteractionFallback (character, item)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.InventoryBoundChanged">Osi.InventoryBoundChanged (item, isBoundToInventory)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.InventorySharingChanged">Osi.InventorySharingChanged (character, sharingEnabled)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ItemEnteredTrigger">Osi.ItemEnteredTrigger (item, trigger, mover)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ItemLeftTrigger">Osi.ItemLeftTrigger (item, trigger, mover)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ItemTeleported">Osi.ItemTeleported (target, oldX, oldY, oldZ, newX, newY, newZ)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.KilledBy">Osi.KilledBy (defender, attackOwner, attacker, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.LearnedSpell">Osi.LearnedSpell (character, spell)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.LeftCombat">Osi.LeftCombat (object, combatGuid)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.LeftForceTurnBased">Osi.LeftForceTurnBased (object)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.LeftLevel">Osi.LeftLevel (object, level)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.LeftTrigger">Osi.LeftTrigger (character, trigger)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.LevelGameplayStarted">Osi.LevelGameplayStarted (levelName, isEditorMode)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.LevelLoaded">Osi.LevelLoaded (newLevel)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.LevelTemplateLoaded">Osi.LevelTemplateLoaded (levelTemplate)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.LevelUnloading">Osi.LevelUnloading (level)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.LeveledUp">Osi.LeveledUp (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.LostSightOf">Osi.LostSightOf (character, targetCharacter)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.MainPerformerStarted">Osi.MainPerformerStarted (character, event)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.MessageBoxChoiceClosed">Osi.MessageBoxChoiceClosed (character, message, resultChoice)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.MessageBoxClosed">Osi.MessageBoxClosed (character, message)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.MessageBoxYesNoClosed">Osi.MessageBoxYesNoClosed (character, message, result)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.MissedBy">Osi.MissedBy (defender, attackOwner, attacker, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ModuleLoadedinSavegame">Osi.ModuleLoadedinSavegame (name, major, minor, revision, build)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.MoveCapabilityChanged">Osi.MoveCapabilityChanged (character, isEnabled)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Moved">Osi.Moved (item)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.MovedBy">Osi.MovedBy (movedEntity, character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.MovedFromTo">Osi.MovedFromTo (movedObject, fromObject, toObject, isTrade)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.MovieFinished">Osi.MovieFinished (movieName)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.MoviePlaylistFinished">Osi.MoviePlaylistFinished (movieName)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.NestedDialogPlayed">Osi.NestedDialogPlayed (dialog, instanceID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ObjectAvailableLevelChanged">Osi.ObjectAvailableLevelChanged (character, oldLevel, newLevel)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ObjectTimerFinished">Osi.ObjectTimerFinished (object, timer)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ObjectTransformed">Osi.ObjectTransformed (object, toTemplate)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ObscuredStateChanged">Osi.ObscuredStateChanged (object, obscuredState)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.OnCrimeConfrontationDone">Osi.OnCrimeConfrontationDone (crimeID, investigator, wasLead, criminal1, criminal2, criminal3, criminal4)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.OnCrimeInvestigatorSwitchedState">Osi.OnCrimeInvestigatorSwitchedState (crimeID, investigator, fromState, toState)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.OnCrimeMergedWith">Osi.OnCrimeMergedWith (oldCrimeID, newCrimeID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.OnCrimeRemoved">Osi.OnCrimeRemoved (crimeID, victim, criminal1, criminal2, criminal3, criminal4)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.OnCrimeResetInterrogationForCriminal">Osi.OnCrimeResetInterrogationForCriminal (crimeID, criminal)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.OnCrimeResolved">Osi.OnCrimeResolved (crimeID, victim, criminal1, criminal2, criminal3, criminal4)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.OnCriminalMergedWithCrime">Osi.OnCriminalMergedWithCrime (crimeID, criminal)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.OnShutdown">Osi.OnShutdown (isEditorMode)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.OnStartCarrying">Osi.OnStartCarrying (carriedObject, carriedObjectTemplate, carrier, storyActionID, pickupPosX, pickupPosY, pickupPosZ)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.OnStoryOverride">Osi.OnStoryOverride (target)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.OnThrown">Osi.OnThrown (thrownObject, thrownObjectTemplate, thrower, storyActionID, throwPosX, throwPosY, throwPosZ)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Opened">Osi.Opened (item)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.PartyPresetLoaded">Osi.PartyPresetLoaded (partyPreset, levelName)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.PickupFailed">Osi.PickupFailed (character, item)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.PingRequested">Osi.PingRequested (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.PlatformDestroyed">Osi.PlatformDestroyed (object)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.PlatformMovementCanceled">Osi.PlatformMovementCanceled (object, eventId)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.PlatformMovementFinished">Osi.PlatformMovementFinished (object, eventId)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.PreMovedBy">Osi.PreMovedBy (item, character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.PuzzleUIClosed">Osi.PuzzleUIClosed (character, uIInstance, type)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.PuzzleUIUsed">Osi.PuzzleUIUsed (character, uIInstance, type, command, elementId)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.QuestAccepted">Osi.QuestAccepted (character, questID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.QuestClosed">Osi.QuestClosed (questID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.QuestUpdateUnlocked">Osi.QuestUpdateUnlocked (character, topLevelQuestID, stateID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.QueuePurged">Osi.QueuePurged (object)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RandomCastProcessed">Osi.RandomCastProcessed (caster, storyActionID, spellID, rollResult, randomCastDC)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ReactionInterruptActionNeeded">Osi.ReactionInterruptActionNeeded (object)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ReactionInterruptAdded">Osi.ReactionInterruptAdded (character, reactionInterruptName)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ReactionInterruptUsed">Osi.ReactionInterruptUsed (object, reactionInterruptPrototypeId, isAutoTriggered)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ReadyCheckFailed">Osi.ReadyCheckFailed (id)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ReadyCheckPassed">Osi.ReadyCheckPassed (id)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RelationChanged">Osi.RelationChanged (sourceFaction, targetFaction, newRelation, permanent)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RemovedFrom">Osi.RemovedFrom (object, inventoryHolder)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ReposeAdded">Osi.ReposeAdded (entity, onEntity)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ReposeRemoved">Osi.ReposeRemoved (entity, onEntity)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RequestCanCombine">Osi.RequestCanCombine (character, item1, item2, item3, item4, item5, requestID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RequestCanDisarmTrap">Osi.RequestCanDisarmTrap (character, item, requestID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RequestCanLockpick">Osi.RequestCanLockpick (character, item, requestID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RequestCanLoot">Osi.RequestCanLoot (looter, target)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RequestCanMove">Osi.RequestCanMove (character, item, requestID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RequestCanPickup">Osi.RequestCanPickup (character, object, requestID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RequestCanUse">Osi.RequestCanUse (character, item, requestID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RequestGatherAtCampFail">Osi.RequestGatherAtCampFail (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RequestGatherAtCampSuccess">Osi.RequestGatherAtCampSuccess (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RequestPickpocket">Osi.RequestPickpocket (player, npc)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RequestTrade">Osi.RequestTrade (character, trader, tradeMode, itemsTagFilter)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RespecCancelled">Osi.RespecCancelled (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RespecCompleted">Osi.RespecCompleted (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Resurrected">Osi.Resurrected (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RollResult">Osi.RollResult (eventName, roller, rollSubject, resultType, isActiveRoll, criticality)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RulesetModifierChangedBool">Osi.RulesetModifierChangedBool (modifier, old, new)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RulesetModifierChangedFloat">Osi.RulesetModifierChangedFloat (modifier, old, new)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RulesetModifierChangedInt">Osi.RulesetModifierChangedInt (modifier, old, new)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.RulesetModifierChangedString">Osi.RulesetModifierChangedString (modifier, old, new)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.SafeRomanceOptionChanged">Osi.SafeRomanceOptionChanged (userID, state)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Saw">Osi.Saw (character, targetCharacter, targetWasSneaking)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ScatteredAt">Osi.ScatteredAt (item, x, y, z)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ScreenFadeCleared">Osi.ScreenFadeCleared (userID, fadeID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ScreenFadeDone">Osi.ScreenFadeDone (userID, fadeID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ShapeshiftChanged">Osi.ShapeshiftChanged (character, race, gender, shapeshiftStatus)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ShapeshiftedHitpointsChanged">Osi.ShapeshiftedHitpointsChanged (entity, percentage)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ShareInitiative">Osi.ShareInitiative (object)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ShortRestCapable">Osi.ShortRestCapable (character, capable)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ShortRestProcessing">Osi.ShortRestProcessing (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.ShortRested">Osi.ShortRested (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StackedWith">Osi.StackedWith (item, stackedWithItem)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StartAttack">Osi.StartAttack (defender, attackOwner, attacker, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StartAttackPosition">Osi.StartAttackPosition (x, y, z, attackOwner, attacker, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StartedDisarmingTrap">Osi.StartedDisarmingTrap (character, item)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StartedFleeing">Osi.StartedFleeing (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StartedLockpicking">Osi.StartedLockpicking (character, item)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StartedPreviewingSpell">Osi.StartedPreviewingSpell (caster, spell, isMostPowerful, hasMultipleLevels)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StatusApplied">Osi.StatusApplied (object, status, causee, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StatusAttempt">Osi.StatusAttempt (object, status, causee, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StatusAttemptFailed">Osi.StatusAttemptFailed (object, status, causee, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StatusRemoved">Osi.StatusRemoved (object, status, causee, applyStoryActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StatusTagCleared">Osi.StatusTagCleared (target, tag, sourceOwner, source2, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StatusTagSet">Osi.StatusTagSet (target, tag, sourceOwner, source2, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StoppedCombining">Osi.StoppedCombining (character, item1, item2, item3, item4, item5)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StoppedDisarmingTrap">Osi.StoppedDisarmingTrap (character, item)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StoppedLockpicking">Osi.StoppedLockpicking (character, item)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.StoppedSneaking">Osi.StoppedSneaking (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.SubQuestUpdateUnlocked">Osi.SubQuestUpdateUnlocked (character, subQuestID, stateID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.SupplyTemplateSpent">Osi.SupplyTemplateSpent (templateId, amount)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.SwarmAIGroupJoined">Osi.SwarmAIGroupJoined (object, group)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.SwarmAIGroupLeft">Osi.SwarmAIGroupLeft (object, group)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.SwitchedCombat">Osi.SwitchedCombat (object, oldCombatGuid, newCombatGuid)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TadpolePowerAssigned">Osi.TadpolePowerAssigned (character, power)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TagCleared">Osi.TagCleared (target, tag)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TagEvent">Osi.TagEvent (tag, event)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TagSet">Osi.TagSet (target, tag)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TeleportToFleeWaypoint">Osi.TeleportToFleeWaypoint (character, trigger)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TeleportToFromCamp">Osi.TeleportToFromCamp (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TeleportToWaypoint">Osi.TeleportToWaypoint (character, trigger)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Teleported">Osi.Teleported (target, cause, oldX, oldY, oldZ, newX, newY, newZ, spell)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TeleportedFromCamp">Osi.TeleportedFromCamp (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TeleportedToCamp">Osi.TeleportedToCamp (character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemplateAddedTo">Osi.TemplateAddedTo (objectTemplate, object2, inventoryHolder, addType)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemplateDestroyedBy">Osi.TemplateDestroyedBy (itemTemplate, item2, destroyer, destroyerOwner, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemplateEnteredTrigger">Osi.TemplateEnteredTrigger (itemTemplate, item2, trigger, owner, mover)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemplateEquipped">Osi.TemplateEquipped (itemTemplate, character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemplateKilledBy">Osi.TemplateKilledBy (characterTemplate, defender, attackOwner, attacker, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemplateLeftTrigger">Osi.TemplateLeftTrigger (itemTemplate, item2, trigger, owner, mover)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemplateOpening">Osi.TemplateOpening (itemTemplate, item2, character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemplateRemovedFrom">Osi.TemplateRemovedFrom (objectTemplate, object2, inventoryHolder)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemplateUnequipped">Osi.TemplateUnequipped (itemTemplate, character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemplateUseFinished">Osi.TemplateUseFinished (character, itemTemplate, item2, sucess)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemplateUseStarted">Osi.TemplateUseStarted (character, itemTemplate, item2)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemplatesCombined">Osi.TemplatesCombined (template1, template2, template3, template4, template5, character, newItem)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemporaryHostileRelationRemoved">Osi.TemporaryHostileRelationRemoved (enemy, sourceFaction, targetFaction)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TemporaryHostileRelationRequestHandled">Osi.TemporaryHostileRelationRequestHandled (character1, character2, success)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TextEvent">Osi.TextEvent (event)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TimelineScreenFadeStarted">Osi.TimelineScreenFadeStarted (userID, dialogInstanceId, dialog2)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TimerFinished">Osi.TimerFinished (timer)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TradeEnds">Osi.TradeEnds (character, trader)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TradeGenerationEnded">Osi.TradeGenerationEnded (trader)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TradeGenerationStarted">Osi.TradeGenerationStarted (trader)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TurnEnded">Osi.TurnEnded (object)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TurnStarted">Osi.TurnStarted (object)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TutorialBoxClosed">Osi.TutorialBoxClosed (character, message)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TutorialClosed">Osi.TutorialClosed (userId, entryId)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.TutorialEvent">Osi.TutorialEvent (entity, event)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UnequipFailed">Osi.UnequipFailed (item, character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Unequipped">Osi.Unequipped (item, character)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.Unlocked">Osi.Unlocked (item, character, key)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UnlockedRecipe">Osi.UnlockedRecipe (character, recipe)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UseFinished">Osi.UseFinished (character, item, sucess)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UseStarted">Osi.UseStarted (character, item)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UserAvatarCreated">Osi.UserAvatarCreated (userID, avatar, daisy)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UserCampChestChanged">Osi.UserCampChestChanged (userID, chest)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UserCharacterLongRested">Osi.UserCharacterLongRested (character, isFullRest)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UserConnected">Osi.UserConnected (userID, userName, userProfileID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UserDisconnected">Osi.UserDisconnected (userID, userName, userProfileID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UserEvent">Osi.UserEvent (userID, userEvent)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UserMakeWar">Osi.UserMakeWar (sourceUserID, targetUserID, war)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UsingSpell">Osi.UsingSpell (caster, spell, spellType, spellElement, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UsingSpellAtPosition">Osi.UsingSpellAtPosition (caster, x, y, z, spell, spellType, spellElement, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UsingSpellInTrigger">Osi.UsingSpellInTrigger (caster, spell, spellType, spellElement, trigger, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UsingSpellOnTarget">Osi.UsingSpellOnTarget (caster, target, spell, spellType, spellElement, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.UsingSpellOnZoneWithTarget">Osi.UsingSpellOnZoneWithTarget (caster, target, spell, spellType, spellElement, storyActionID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.VoiceBarkEnded">Osi.VoiceBarkEnded (bark, instanceID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.VoiceBarkFailed">Osi.VoiceBarkFailed (bark)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.VoiceBarkStarted">Osi.VoiceBarkStarted (bark, instanceID)</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Osi.WentOnStage">Osi.WentOnStage (object, isOnStageNow)</a></td>
+	<td class="summary"></td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Osi.Activated"></a>
+    <strong>Osi.Activated (object)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ActorSpeakerIndexChanged"></a>
+    <strong>Osi.ActorSpeakerIndexChanged (instanceID, player, oldIndex, newIndex)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+        <li><span class="parameter">player</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">oldIndex</span>
+         integer
+        </li>
+        <li><span class="parameter">newIndex</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.AddedTo"></a>
+    <strong>Osi.AddedTo (object, inventoryHolder, addType)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">inventoryHolder</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">addType</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.AnimationEvent"></a>
+    <strong>Osi.AnimationEvent (object, eventName, wasFromLoad)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">eventName</span>
+         string
+        </li>
+        <li><span class="parameter">wasFromLoad</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.AppearTeleportFailed"></a>
+    <strong>Osi.AppearTeleportFailed (character, appearEvent)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">appearEvent</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ApprovalRatingChangeAttempt"></a>
+    <strong>Osi.ApprovalRatingChangeAttempt (ratingOwner, ratedEntity, attemptedApprovalChange, clampedApprovalChange, newApproval)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ratingOwner</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">ratedEntity</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">attemptedApprovalChange</span>
+         integer
+        </li>
+        <li><span class="parameter">clampedApprovalChange</span>
+         integer
+        </li>
+        <li><span class="parameter">newApproval</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ApprovalRatingChanged"></a>
+    <strong>Osi.ApprovalRatingChanged (ratingOwner, ratedEntity, newApproval)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ratingOwner</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">ratedEntity</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">newApproval</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ArmedTrapUsed"></a>
+    <strong>Osi.ArmedTrapUsed (character, item)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ArmorSetChanged"></a>
+    <strong>Osi.ArmorSetChanged (character, eArmorSet)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">eArmorSet</span>
+         ARMOURSET
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.AttachedToPartyGroup"></a>
+    <strong>Osi.AttachedToPartyGroup (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.AttackedBy"></a>
+    <strong>Osi.AttackedBy (defender, attackerOwner, attacker2, damageType, damageAmount, damageCause, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">defender</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">attackerOwner</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">attacker2</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">damageType</span>
+         string
+        </li>
+        <li><span class="parameter">damageAmount</span>
+         integer
+        </li>
+        <li><span class="parameter">damageCause</span>
+         string
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.AttemptedDisarm"></a>
+    <strong>Osi.AttemptedDisarm (disarmableItem, character, itemUsedToDisarm, bool)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">disarmableItem</span>
+         ITEM
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">itemUsedToDisarm</span>
+         ITEM
+        </li>
+        <li><span class="parameter">bool</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.AutomatedDialogEnded"></a>
+    <strong>Osi.AutomatedDialogEnded (dialog, instanceID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.AutomatedDialogForceStopping"></a>
+    <strong>Osi.AutomatedDialogForceStopping (dialog, instanceID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.AutomatedDialogRequestFailed"></a>
+    <strong>Osi.AutomatedDialogRequestFailed (dialog, instanceID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.AutomatedDialogStarted"></a>
+    <strong>Osi.AutomatedDialogStarted (dialog, instanceID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.BackgroundGoalFailed"></a>
+    <strong>Osi.BackgroundGoalFailed (character, goal)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">goal</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.BackgroundGoalRewarded"></a>
+    <strong>Osi.BackgroundGoalRewarded (character, goal)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">goal</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.BaseFactionChanged"></a>
+    <strong>Osi.BaseFactionChanged (target, oldFaction, newFaction)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">oldFaction</span>
+         FACTION
+        </li>
+        <li><span class="parameter">newFaction</span>
+         FACTION
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CameraReachedNode"></a>
+    <strong>Osi.CameraReachedNode (spline, character, event, index, last)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">spline</span>
+         SPLINE
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">event</span>
+         string
+        </li>
+        <li><span class="parameter">index</span>
+         integer
+        </li>
+        <li><span class="parameter">last</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CanBeLootedCapabilityChanged"></a>
+    <strong>Osi.CanBeLootedCapabilityChanged (lootingTarget, canBeLooted)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">lootingTarget</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">canBeLooted</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CastSpell"></a>
+    <strong>Osi.CastSpell (caster, spell, spellType, spellElement, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">caster</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">spell</span>
+         string
+        </li>
+        <li><span class="parameter">spellType</span>
+         string
+        </li>
+        <li><span class="parameter">spellElement</span>
+         string
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CastSpellFailed"></a>
+    <strong>Osi.CastSpellFailed (caster, spell, spellType, spellElement, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">caster</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">spell</span>
+         string
+        </li>
+        <li><span class="parameter">spellType</span>
+         string
+        </li>
+        <li><span class="parameter">spellElement</span>
+         string
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CastedSpell"></a>
+    <strong>Osi.CastedSpell (caster, spell, spellType, spellElement, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">caster</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">spell</span>
+         string
+        </li>
+        <li><span class="parameter">spellType</span>
+         string
+        </li>
+        <li><span class="parameter">spellElement</span>
+         string
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ChangeAppearanceCancelled"></a>
+    <strong>Osi.ChangeAppearanceCancelled (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ChangeAppearanceCompleted"></a>
+    <strong>Osi.ChangeAppearanceCompleted (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterDisarmed"></a>
+    <strong>Osi.CharacterDisarmed (character, item, slotName)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">slotName</span>
+         EQUIPMENTSLOTNAME
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterJoinedParty"></a>
+    <strong>Osi.CharacterJoinedParty (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterLeftParty"></a>
+    <strong>Osi.CharacterLeftParty (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterLoadedInPreset"></a>
+    <strong>Osi.CharacterLoadedInPreset (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterLootedCharacter"></a>
+    <strong>Osi.CharacterLootedCharacter (player, lootedCharacter)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">lootedCharacter</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterMadePlayer"></a>
+    <strong>Osi.CharacterMadePlayer (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterMoveFailedUseJump"></a>
+    <strong>Osi.CharacterMoveFailedUseJump (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterMoveToAndTalkFailed"></a>
+    <strong>Osi.CharacterMoveToAndTalkFailed (character, target, moveID, failureReason)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">target</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">moveID</span>
+         string
+        </li>
+        <li><span class="parameter">failureReason</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterMoveToAndTalkRequestDialog"></a>
+    <strong>Osi.CharacterMoveToAndTalkRequestDialog (character, target, dialog, moveID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">target</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">moveID</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterMoveToCancelled"></a>
+    <strong>Osi.CharacterMoveToCancelled (character, moveID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">moveID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterOnCrimeSensibleActionNotification"></a>
+    <strong>Osi.CharacterOnCrimeSensibleActionNotification (character, crimeRegion, crimeID, priortiyName, primaryDialog, criminal1, criminal2, criminal3, criminal4, isPrimary)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">crimeRegion</span>
+         string
+        </li>
+        <li><span class="parameter">crimeID</span>
+         integer
+        </li>
+        <li><span class="parameter">priortiyName</span>
+         string
+        </li>
+        <li><span class="parameter">primaryDialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">criminal1</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal2</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal3</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal4</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">isPrimary</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterPickpocketFailed"></a>
+    <strong>Osi.CharacterPickpocketFailed (player, npc)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">npc</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterPickpocketSuccess"></a>
+    <strong>Osi.CharacterPickpocketSuccess (player, npc, item, itemTemplate, amount, goldValue)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">npc</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">itemTemplate</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">amount</span>
+         integer
+        </li>
+        <li><span class="parameter">goldValue</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterReservedUserIDChanged"></a>
+    <strong>Osi.CharacterReservedUserIDChanged (character, oldUserID, newUserID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">oldUserID</span>
+         integer
+        </li>
+        <li><span class="parameter">newUserID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterSelectedAsBestUnavailableFallbackLead"></a>
+    <strong>Osi.CharacterSelectedAsBestUnavailableFallbackLead (character, crimeRegion, unavailableForCrimeID, busyCrimeID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">crimeRegion</span>
+         string
+        </li>
+        <li><span class="parameter">unavailableForCrimeID</span>
+         integer
+        </li>
+        <li><span class="parameter">busyCrimeID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterSelectedClimbOn"></a>
+    <strong>Osi.CharacterSelectedClimbOn (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterSelectedForUser"></a>
+    <strong>Osi.CharacterSelectedForUser (character, userID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">userID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterStoleItem"></a>
+    <strong>Osi.CharacterStoleItem (character, item, itemRootTemplate, x, y, z, oldOwner, srcContainer, amount, goldValue)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">itemRootTemplate</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">x</span>
+         number
+        </li>
+        <li><span class="parameter">y</span>
+         number
+        </li>
+        <li><span class="parameter">z</span>
+         number
+        </li>
+        <li><span class="parameter">oldOwner</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">srcContainer</span>
+         ITEM
+        </li>
+        <li><span class="parameter">amount</span>
+         integer
+        </li>
+        <li><span class="parameter">goldValue</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CharacterTagEvent"></a>
+    <strong>Osi.CharacterTagEvent (character, tag, event)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">tag</span>
+         TAG
+        </li>
+        <li><span class="parameter">event</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Closed"></a>
+    <strong>Osi.Closed (item)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CombatEnded"></a>
+    <strong>Osi.CombatEnded (combatGuid)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">combatGuid</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CombatPaused"></a>
+    <strong>Osi.CombatPaused (combatGuid)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">combatGuid</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CombatResumed"></a>
+    <strong>Osi.CombatResumed (combatGuid)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">combatGuid</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CombatRoundStarted"></a>
+    <strong>Osi.CombatRoundStarted (combatGuid, round)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">combatGuid</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">round</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CombatStarted"></a>
+    <strong>Osi.CombatStarted (combatGuid)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">combatGuid</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Combined"></a>
+    <strong>Osi.Combined (item1, item2, item3, item4, item5, character, newItem)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item1</span>
+         ITEM
+        </li>
+        <li><span class="parameter">item2</span>
+         ITEM
+        </li>
+        <li><span class="parameter">item3</span>
+         ITEM
+        </li>
+        <li><span class="parameter">item4</span>
+         ITEM
+        </li>
+        <li><span class="parameter">item5</span>
+         ITEM
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">newItem</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CompanionSelectedForUser"></a>
+    <strong>Osi.CompanionSelectedForUser (character, userID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">userID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CrimeDisabled"></a>
+    <strong>Osi.CrimeDisabled (character, crime)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">crime</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CrimeEnabled"></a>
+    <strong>Osi.CrimeEnabled (character, crime)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">crime</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CrimeIsRegistered"></a>
+    <strong>Osi.CrimeIsRegistered (victim, crimeType, crimeID, evidence, criminal1, criminal2, criminal3, criminal4)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">victim</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">crimeType</span>
+         string
+        </li>
+        <li><span class="parameter">crimeID</span>
+         integer
+        </li>
+        <li><span class="parameter">evidence</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">criminal1</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal2</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal3</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal4</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CrimeProcessingStarted"></a>
+    <strong>Osi.CrimeProcessingStarted (crimeID, actedOnImmediately)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">crimeID</span>
+         integer
+        </li>
+        <li><span class="parameter">actedOnImmediately</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CriticalHitBy"></a>
+    <strong>Osi.CriticalHitBy (defender, attackOwner, attacker, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">defender</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">attackOwner</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">attacker</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.CustomBookUIClosed"></a>
+    <strong>Osi.CustomBookUIClosed (character, bookName)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">bookName</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DLCUpdated"></a>
+    <strong>Osi.DLCUpdated (dlc, userID, installed)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dlc</span>
+         DLC
+        </li>
+        <li><span class="parameter">userID</span>
+         integer
+        </li>
+        <li><span class="parameter">installed</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Deactivated"></a>
+    <strong>Osi.Deactivated (object)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DeathSaveStable"></a>
+    <strong>Osi.DeathSaveStable (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DestroyedBy"></a>
+    <strong>Osi.DestroyedBy (item, destroyer, destroyerOwner, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">destroyer</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">destroyerOwner</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DestroyingBy"></a>
+    <strong>Osi.DestroyingBy (item, destroyer, destroyerOwner, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">destroyer</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">destroyerOwner</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DetachedFromPartyGroup"></a>
+    <strong>Osi.DetachedFromPartyGroup (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DialogActorJoinFailed"></a>
+    <strong>Osi.DialogActorJoinFailed (dialog, instanceID, actor)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+        <li><span class="parameter">actor</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DialogActorJoined"></a>
+    <strong>Osi.DialogActorJoined (dialog, instanceID, actor, speakerIndex)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+        <li><span class="parameter">actor</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">speakerIndex</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DialogActorLeft"></a>
+    <strong>Osi.DialogActorLeft (dialog, instanceID, actor, instanceEnded)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+        <li><span class="parameter">actor</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">instanceEnded</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DialogAttackRequested"></a>
+    <strong>Osi.DialogAttackRequested (target, player)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">player</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DialogEnded"></a>
+    <strong>Osi.DialogEnded (dialog, instanceID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DialogForceStopping"></a>
+    <strong>Osi.DialogForceStopping (dialog, instanceID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DialogRequestFailed"></a>
+    <strong>Osi.DialogRequestFailed (dialog, instanceID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DialogRollResult"></a>
+    <strong>Osi.DialogRollResult (character, success, dialog, isDetectThoughts, criticality)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">success</span>
+         integer
+        </li>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">isDetectThoughts</span>
+         integer
+        </li>
+        <li><span class="parameter">criticality</span>
+         CRITICALITYTYPE
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DialogStartRequested"></a>
+    <strong>Osi.DialogStartRequested (target, player)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">player</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DialogStarted"></a>
+    <strong>Osi.DialogStarted (dialog, instanceID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DialogueCapabilityChanged"></a>
+    <strong>Osi.DialogueCapabilityChanged (character, isEnabled)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">isEnabled</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Died"></a>
+    <strong>Osi.Died (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DifficultyChanged"></a>
+    <strong>Osi.DifficultyChanged (difficultyLevel)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">difficultyLevel</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DisappearOutOfSightToCancelled"></a>
+    <strong>Osi.DisappearOutOfSightToCancelled (character, moveID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">moveID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DoorTemplateClosing"></a>
+    <strong>Osi.DoorTemplateClosing (itemTemplate, item2, character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemTemplate</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">item2</span>
+         ITEM
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DownedChanged"></a>
+    <strong>Osi.DownedChanged (character, isDowned)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">isDowned</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DroppedBy"></a>
+    <strong>Osi.DroppedBy (object, mover)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">mover</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.DualEntityEvent"></a>
+    <strong>Osi.DualEntityEvent (object1, object2, event)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object1</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">object2</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">event</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Dying"></a>
+    <strong>Osi.Dying (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.EndTheDayRequested"></a>
+    <strong>Osi.EndTheDayRequested (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.EnterCombatFailed"></a>
+    <strong>Osi.EnterCombatFailed (opponentLeft, opponentRight)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">opponentLeft</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">opponentRight</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.EnteredChasm"></a>
+    <strong>Osi.EnteredChasm (object, cause, chasm, fallbackPosX, fallbackPosY, fallbackPosZ)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">cause</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">chasm</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">fallbackPosX</span>
+         number
+        </li>
+        <li><span class="parameter">fallbackPosY</span>
+         number
+        </li>
+        <li><span class="parameter">fallbackPosZ</span>
+         number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.EnteredCombat"></a>
+    <strong>Osi.EnteredCombat (object, combatGuid)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">combatGuid</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.EnteredForceTurnBased"></a>
+    <strong>Osi.EnteredForceTurnBased (object)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.EnteredLevel"></a>
+    <strong>Osi.EnteredLevel (object, objectRootTemplate, level)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">objectRootTemplate</span>
+         ROOT
+        </li>
+        <li><span class="parameter">level</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.EnteredSharedForceTurnBased"></a>
+    <strong>Osi.EnteredSharedForceTurnBased (object, zoneId)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">zoneId</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.EnteredTrigger"></a>
+    <strong>Osi.EnteredTrigger (character, trigger)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">trigger</span>
+         TRIGGER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.EntityEvent"></a>
+    <strong>Osi.EntityEvent (object, event)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">event</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.EquipFailed"></a>
+    <strong>Osi.EquipFailed (item, character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Equipped"></a>
+    <strong>Osi.Equipped (item, character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.EscortGroupLeaderChanged"></a>
+    <strong>Osi.EscortGroupLeaderChanged (oldLeader, newLeader, group)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">oldLeader</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">newLeader</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">group</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.FailedToLoadItemInPreset"></a>
+    <strong>Osi.FailedToLoadItemInPreset (character, originalItem, level, newItem)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">originalItem</span>
+         ITEM
+        </li>
+        <li><span class="parameter">level</span>
+         string
+        </li>
+        <li><span class="parameter">newItem</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Falling"></a>
+    <strong>Osi.Falling (entity, cause)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">cause</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Fell"></a>
+    <strong>Osi.Fell (entity, cause)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">cause</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.FlagCleared"></a>
+    <strong>Osi.FlagCleared (flag, speaker, dialogInstance)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">flag</span>
+         FLAG
+        </li>
+        <li><span class="parameter">speaker</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">dialogInstance</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.FlagLoadedInPresetEvent"></a>
+    <strong>Osi.FlagLoadedInPresetEvent (object, flag)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">flag</span>
+         FLAG
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.FlagSet"></a>
+    <strong>Osi.FlagSet (flag, speaker, dialogInstance)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">flag</span>
+         FLAG
+        </li>
+        <li><span class="parameter">speaker</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">dialogInstance</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.FleeFromCombat"></a>
+    <strong>Osi.FleeFromCombat (participant, combatGuid)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">participant</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">combatGuid</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.FollowerCantUseItem"></a>
+    <strong>Osi.FollowerCantUseItem (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ForceDismissCompanion"></a>
+    <strong>Osi.ForceDismissCompanion (companion)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">companion</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ForceMoveEnded"></a>
+    <strong>Osi.ForceMoveEnded (source, target, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">source</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">target</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ForceMoveStarted"></a>
+    <strong>Osi.ForceMoveStarted (source, target, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">source</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">target</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.GainedControl"></a>
+    <strong>Osi.GainedControl (target)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.GameBookInterfaceClosed"></a>
+    <strong>Osi.GameBookInterfaceClosed (item, character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.GameModeStarted"></a>
+    <strong>Osi.GameModeStarted (gameMode, isEditorMode, isStoryReload)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">gameMode</span>
+         string
+        </li>
+        <li><span class="parameter">isEditorMode</span>
+         integer
+        </li>
+        <li><span class="parameter">isStoryReload</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.GameOption"></a>
+    <strong>Osi.GameOption (key, value)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+         string
+        </li>
+        <li><span class="parameter">value</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.GoldChanged"></a>
+    <strong>Osi.GoldChanged (inventoryHolder, changeAmount)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">inventoryHolder</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">changeAmount</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.GotUp"></a>
+    <strong>Osi.GotUp (target)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.HappyWithDeal"></a>
+    <strong>Osi.HappyWithDeal (character, trader, characterValue, traderValue)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">trader</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">characterValue</span>
+         integer
+        </li>
+        <li><span class="parameter">traderValue</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.HenchmanAborted"></a>
+    <strong>Osi.HenchmanAborted (player)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.HenchmanSelected"></a>
+    <strong>Osi.HenchmanSelected (player, hireling)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">hireling</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.HitProxy"></a>
+    <strong>Osi.HitProxy (proxy, target, attackerOwner, attacker2, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">proxy</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">target</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">attackerOwner</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">attacker2</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.HitpointsChanged"></a>
+    <strong>Osi.HitpointsChanged (entity, percentage)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">percentage</span>
+         number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.InstanceDialogChanged"></a>
+    <strong>Osi.InstanceDialogChanged (instanceID, oldDialog, newDialog, oldDialogStopping)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+        <li><span class="parameter">oldDialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">newDialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">oldDialogStopping</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.InteractionCapabilityChanged"></a>
+    <strong>Osi.InteractionCapabilityChanged (character, isEnabled)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">isEnabled</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.InteractionFallback"></a>
+    <strong>Osi.InteractionFallback (character, item)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.InventoryBoundChanged"></a>
+    <strong>Osi.InventoryBoundChanged (item, isBoundToInventory)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">isBoundToInventory</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.InventorySharingChanged"></a>
+    <strong>Osi.InventorySharingChanged (character, sharingEnabled)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">sharingEnabled</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ItemEnteredTrigger"></a>
+    <strong>Osi.ItemEnteredTrigger (item, trigger, mover)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">trigger</span>
+         TRIGGER
+        </li>
+        <li><span class="parameter">mover</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ItemLeftTrigger"></a>
+    <strong>Osi.ItemLeftTrigger (item, trigger, mover)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">trigger</span>
+         TRIGGER
+        </li>
+        <li><span class="parameter">mover</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ItemTeleported"></a>
+    <strong>Osi.ItemTeleported (target, oldX, oldY, oldZ, newX, newY, newZ)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         ITEM
+        </li>
+        <li><span class="parameter">oldX</span>
+         number
+        </li>
+        <li><span class="parameter">oldY</span>
+         number
+        </li>
+        <li><span class="parameter">oldZ</span>
+         number
+        </li>
+        <li><span class="parameter">newX</span>
+         number
+        </li>
+        <li><span class="parameter">newY</span>
+         number
+        </li>
+        <li><span class="parameter">newZ</span>
+         number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.KilledBy"></a>
+    <strong>Osi.KilledBy (defender, attackOwner, attacker, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">defender</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">attackOwner</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">attacker</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.LearnedSpell"></a>
+    <strong>Osi.LearnedSpell (character, spell)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">spell</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.LeftCombat"></a>
+    <strong>Osi.LeftCombat (object, combatGuid)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">combatGuid</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.LeftForceTurnBased"></a>
+    <strong>Osi.LeftForceTurnBased (object)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.LeftLevel"></a>
+    <strong>Osi.LeftLevel (object, level)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">level</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.LeftTrigger"></a>
+    <strong>Osi.LeftTrigger (character, trigger)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">trigger</span>
+         TRIGGER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.LevelGameplayStarted"></a>
+    <strong>Osi.LevelGameplayStarted (levelName, isEditorMode)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">levelName</span>
+         string
+        </li>
+        <li><span class="parameter">isEditorMode</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.LevelLoaded"></a>
+    <strong>Osi.LevelLoaded (newLevel)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">newLevel</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.LevelTemplateLoaded"></a>
+    <strong>Osi.LevelTemplateLoaded (levelTemplate)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">levelTemplate</span>
+         LEVELTEMPLATE
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.LevelUnloading"></a>
+    <strong>Osi.LevelUnloading (level)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">level</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.LeveledUp"></a>
+    <strong>Osi.LeveledUp (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.LostSightOf"></a>
+    <strong>Osi.LostSightOf (character, targetCharacter)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">targetCharacter</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.MainPerformerStarted"></a>
+    <strong>Osi.MainPerformerStarted (character, event)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">event</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.MessageBoxChoiceClosed"></a>
+    <strong>Osi.MessageBoxChoiceClosed (character, message, resultChoice)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">message</span>
+         string
+        </li>
+        <li><span class="parameter">resultChoice</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.MessageBoxClosed"></a>
+    <strong>Osi.MessageBoxClosed (character, message)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">message</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.MessageBoxYesNoClosed"></a>
+    <strong>Osi.MessageBoxYesNoClosed (character, message, result)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">message</span>
+         string
+        </li>
+        <li><span class="parameter">result</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.MissedBy"></a>
+    <strong>Osi.MissedBy (defender, attackOwner, attacker, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">defender</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">attackOwner</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">attacker</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ModuleLoadedinSavegame"></a>
+    <strong>Osi.ModuleLoadedinSavegame (name, major, minor, revision, build)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+         string
+        </li>
+        <li><span class="parameter">major</span>
+         integer
+        </li>
+        <li><span class="parameter">minor</span>
+         integer
+        </li>
+        <li><span class="parameter">revision</span>
+         integer
+        </li>
+        <li><span class="parameter">build</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.MoveCapabilityChanged"></a>
+    <strong>Osi.MoveCapabilityChanged (character, isEnabled)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">isEnabled</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Moved"></a>
+    <strong>Osi.Moved (item)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.MovedBy"></a>
+    <strong>Osi.MovedBy (movedEntity, character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">movedEntity</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.MovedFromTo"></a>
+    <strong>Osi.MovedFromTo (movedObject, fromObject, toObject, isTrade)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">movedObject</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">fromObject</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">toObject</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">isTrade</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.MovieFinished"></a>
+    <strong>Osi.MovieFinished (movieName)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">movieName</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.MoviePlaylistFinished"></a>
+    <strong>Osi.MoviePlaylistFinished (movieName)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">movieName</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.NestedDialogPlayed"></a>
+    <strong>Osi.NestedDialogPlayed (dialog, instanceID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dialog</span>
+         DIALOGRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ObjectAvailableLevelChanged"></a>
+    <strong>Osi.ObjectAvailableLevelChanged (character, oldLevel, newLevel)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">oldLevel</span>
+         integer
+        </li>
+        <li><span class="parameter">newLevel</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ObjectTimerFinished"></a>
+    <strong>Osi.ObjectTimerFinished (object, timer)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">timer</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ObjectTransformed"></a>
+    <strong>Osi.ObjectTransformed (object, toTemplate)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">toTemplate</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ObscuredStateChanged"></a>
+    <strong>Osi.ObscuredStateChanged (object, obscuredState)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">obscuredState</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.OnCrimeConfrontationDone"></a>
+    <strong>Osi.OnCrimeConfrontationDone (crimeID, investigator, wasLead, criminal1, criminal2, criminal3, criminal4)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">crimeID</span>
+         integer
+        </li>
+        <li><span class="parameter">investigator</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">wasLead</span>
+         integer
+        </li>
+        <li><span class="parameter">criminal1</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal2</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal3</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal4</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.OnCrimeInvestigatorSwitchedState"></a>
+    <strong>Osi.OnCrimeInvestigatorSwitchedState (crimeID, investigator, fromState, toState)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">crimeID</span>
+         integer
+        </li>
+        <li><span class="parameter">investigator</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">fromState</span>
+         string
+        </li>
+        <li><span class="parameter">toState</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.OnCrimeMergedWith"></a>
+    <strong>Osi.OnCrimeMergedWith (oldCrimeID, newCrimeID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">oldCrimeID</span>
+         integer
+        </li>
+        <li><span class="parameter">newCrimeID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.OnCrimeRemoved"></a>
+    <strong>Osi.OnCrimeRemoved (crimeID, victim, criminal1, criminal2, criminal3, criminal4)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">crimeID</span>
+         integer
+        </li>
+        <li><span class="parameter">victim</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal1</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal2</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal3</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal4</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.OnCrimeResetInterrogationForCriminal"></a>
+    <strong>Osi.OnCrimeResetInterrogationForCriminal (crimeID, criminal)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">crimeID</span>
+         integer
+        </li>
+        <li><span class="parameter">criminal</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.OnCrimeResolved"></a>
+    <strong>Osi.OnCrimeResolved (crimeID, victim, criminal1, criminal2, criminal3, criminal4)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">crimeID</span>
+         integer
+        </li>
+        <li><span class="parameter">victim</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal1</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal2</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal3</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">criminal4</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.OnCriminalMergedWithCrime"></a>
+    <strong>Osi.OnCriminalMergedWithCrime (crimeID, criminal)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">crimeID</span>
+         integer
+        </li>
+        <li><span class="parameter">criminal</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.OnShutdown"></a>
+    <strong>Osi.OnShutdown (isEditorMode)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">isEditorMode</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.OnStartCarrying"></a>
+    <strong>Osi.OnStartCarrying (carriedObject, carriedObjectTemplate, carrier, storyActionID, pickupPosX, pickupPosY, pickupPosZ)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">carriedObject</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">carriedObjectTemplate</span>
+         ROOT
+        </li>
+        <li><span class="parameter">carrier</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+        <li><span class="parameter">pickupPosX</span>
+         number
+        </li>
+        <li><span class="parameter">pickupPosY</span>
+         number
+        </li>
+        <li><span class="parameter">pickupPosZ</span>
+         number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.OnStoryOverride"></a>
+    <strong>Osi.OnStoryOverride (target)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.OnThrown"></a>
+    <strong>Osi.OnThrown (thrownObject, thrownObjectTemplate, thrower, storyActionID, throwPosX, throwPosY, throwPosZ)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">thrownObject</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">thrownObjectTemplate</span>
+         ROOT
+        </li>
+        <li><span class="parameter">thrower</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+        <li><span class="parameter">throwPosX</span>
+         number
+        </li>
+        <li><span class="parameter">throwPosY</span>
+         number
+        </li>
+        <li><span class="parameter">throwPosZ</span>
+         number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Opened"></a>
+    <strong>Osi.Opened (item)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.PartyPresetLoaded"></a>
+    <strong>Osi.PartyPresetLoaded (partyPreset, levelName)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">partyPreset</span>
+         string
+        </li>
+        <li><span class="parameter">levelName</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.PickupFailed"></a>
+    <strong>Osi.PickupFailed (character, item)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.PingRequested"></a>
+    <strong>Osi.PingRequested (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.PlatformDestroyed"></a>
+    <strong>Osi.PlatformDestroyed (object)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.PlatformMovementCanceled"></a>
+    <strong>Osi.PlatformMovementCanceled (object, eventId)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">eventId</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.PlatformMovementFinished"></a>
+    <strong>Osi.PlatformMovementFinished (object, eventId)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">eventId</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.PreMovedBy"></a>
+    <strong>Osi.PreMovedBy (item, character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.PuzzleUIClosed"></a>
+    <strong>Osi.PuzzleUIClosed (character, uIInstance, type)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">uIInstance</span>
+         string
+        </li>
+        <li><span class="parameter">type</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.PuzzleUIUsed"></a>
+    <strong>Osi.PuzzleUIUsed (character, uIInstance, type, command, elementId)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">uIInstance</span>
+         string
+        </li>
+        <li><span class="parameter">type</span>
+         integer
+        </li>
+        <li><span class="parameter">command</span>
+         string
+        </li>
+        <li><span class="parameter">elementId</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.QuestAccepted"></a>
+    <strong>Osi.QuestAccepted (character, questID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">questID</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.QuestClosed"></a>
+    <strong>Osi.QuestClosed (questID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">questID</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.QuestUpdateUnlocked"></a>
+    <strong>Osi.QuestUpdateUnlocked (character, topLevelQuestID, stateID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">topLevelQuestID</span>
+         string
+        </li>
+        <li><span class="parameter">stateID</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.QueuePurged"></a>
+    <strong>Osi.QueuePurged (object)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RandomCastProcessed"></a>
+    <strong>Osi.RandomCastProcessed (caster, storyActionID, spellID, rollResult, randomCastDC)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">caster</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+        <li><span class="parameter">spellID</span>
+         string
+        </li>
+        <li><span class="parameter">rollResult</span>
+         integer
+        </li>
+        <li><span class="parameter">randomCastDC</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ReactionInterruptActionNeeded"></a>
+    <strong>Osi.ReactionInterruptActionNeeded (object)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ReactionInterruptAdded"></a>
+    <strong>Osi.ReactionInterruptAdded (character, reactionInterruptName)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">reactionInterruptName</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ReactionInterruptUsed"></a>
+    <strong>Osi.ReactionInterruptUsed (object, reactionInterruptPrototypeId, isAutoTriggered)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">reactionInterruptPrototypeId</span>
+         string
+        </li>
+        <li><span class="parameter">isAutoTriggered</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ReadyCheckFailed"></a>
+    <strong>Osi.ReadyCheckFailed (id)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">id</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ReadyCheckPassed"></a>
+    <strong>Osi.ReadyCheckPassed (id)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">id</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RelationChanged"></a>
+    <strong>Osi.RelationChanged (sourceFaction, targetFaction, newRelation, permanent)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">sourceFaction</span>
+         FACTION
+        </li>
+        <li><span class="parameter">targetFaction</span>
+         FACTION
+        </li>
+        <li><span class="parameter">newRelation</span>
+         integer
+        </li>
+        <li><span class="parameter">permanent</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RemovedFrom"></a>
+    <strong>Osi.RemovedFrom (object, inventoryHolder)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">inventoryHolder</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ReposeAdded"></a>
+    <strong>Osi.ReposeAdded (entity, onEntity)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">onEntity</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ReposeRemoved"></a>
+    <strong>Osi.ReposeRemoved (entity, onEntity)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">onEntity</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RequestCanCombine"></a>
+    <strong>Osi.RequestCanCombine (character, item1, item2, item3, item4, item5, requestID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item1</span>
+         ITEM
+        </li>
+        <li><span class="parameter">item2</span>
+         ITEM
+        </li>
+        <li><span class="parameter">item3</span>
+         ITEM
+        </li>
+        <li><span class="parameter">item4</span>
+         ITEM
+        </li>
+        <li><span class="parameter">item5</span>
+         ITEM
+        </li>
+        <li><span class="parameter">requestID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RequestCanDisarmTrap"></a>
+    <strong>Osi.RequestCanDisarmTrap (character, item, requestID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">requestID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RequestCanLockpick"></a>
+    <strong>Osi.RequestCanLockpick (character, item, requestID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">requestID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RequestCanLoot"></a>
+    <strong>Osi.RequestCanLoot (looter, target)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">looter</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">target</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RequestCanMove"></a>
+    <strong>Osi.RequestCanMove (character, item, requestID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">requestID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RequestCanPickup"></a>
+    <strong>Osi.RequestCanPickup (character, object, requestID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">requestID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RequestCanUse"></a>
+    <strong>Osi.RequestCanUse (character, item, requestID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">requestID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RequestGatherAtCampFail"></a>
+    <strong>Osi.RequestGatherAtCampFail (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RequestGatherAtCampSuccess"></a>
+    <strong>Osi.RequestGatherAtCampSuccess (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RequestPickpocket"></a>
+    <strong>Osi.RequestPickpocket (player, npc)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">npc</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RequestTrade"></a>
+    <strong>Osi.RequestTrade (character, trader, tradeMode, itemsTagFilter)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">trader</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">tradeMode</span>
+         TRADEMODE
+        </li>
+        <li><span class="parameter">itemsTagFilter</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RespecCancelled"></a>
+    <strong>Osi.RespecCancelled (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RespecCompleted"></a>
+    <strong>Osi.RespecCompleted (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Resurrected"></a>
+    <strong>Osi.Resurrected (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RollResult"></a>
+    <strong>Osi.RollResult (eventName, roller, rollSubject, resultType, isActiveRoll, criticality)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">eventName</span>
+         string
+        </li>
+        <li><span class="parameter">roller</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">rollSubject</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">resultType</span>
+         integer
+        </li>
+        <li><span class="parameter">isActiveRoll</span>
+         integer
+        </li>
+        <li><span class="parameter">criticality</span>
+         CRITICALITYTYPE
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RulesetModifierChangedBool"></a>
+    <strong>Osi.RulesetModifierChangedBool (modifier, old, new)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modifier</span>
+         RULESETMODIFIER
+        </li>
+        <li><span class="parameter">old</span>
+         integer
+        </li>
+        <li><span class="parameter">new</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RulesetModifierChangedFloat"></a>
+    <strong>Osi.RulesetModifierChangedFloat (modifier, old, new)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modifier</span>
+         RULESETMODIFIER
+        </li>
+        <li><span class="parameter">old</span>
+         number
+        </li>
+        <li><span class="parameter">new</span>
+         number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RulesetModifierChangedInt"></a>
+    <strong>Osi.RulesetModifierChangedInt (modifier, old, new)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modifier</span>
+         RULESETMODIFIER
+        </li>
+        <li><span class="parameter">old</span>
+         integer
+        </li>
+        <li><span class="parameter">new</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.RulesetModifierChangedString"></a>
+    <strong>Osi.RulesetModifierChangedString (modifier, old, new)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modifier</span>
+         RULESETMODIFIER
+        </li>
+        <li><span class="parameter">old</span>
+         string
+        </li>
+        <li><span class="parameter">new</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.SafeRomanceOptionChanged"></a>
+    <strong>Osi.SafeRomanceOptionChanged (userID, state)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">userID</span>
+         integer
+        </li>
+        <li><span class="parameter">state</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Saw"></a>
+    <strong>Osi.Saw (character, targetCharacter, targetWasSneaking)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">targetCharacter</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">targetWasSneaking</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ScatteredAt"></a>
+    <strong>Osi.ScatteredAt (item, x, y, z)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">x</span>
+         number
+        </li>
+        <li><span class="parameter">y</span>
+         number
+        </li>
+        <li><span class="parameter">z</span>
+         number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ScreenFadeCleared"></a>
+    <strong>Osi.ScreenFadeCleared (userID, fadeID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">userID</span>
+         integer
+        </li>
+        <li><span class="parameter">fadeID</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ScreenFadeDone"></a>
+    <strong>Osi.ScreenFadeDone (userID, fadeID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">userID</span>
+         integer
+        </li>
+        <li><span class="parameter">fadeID</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ShapeshiftChanged"></a>
+    <strong>Osi.ShapeshiftChanged (character, race, gender, shapeshiftStatus)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">race</span>
+         string
+        </li>
+        <li><span class="parameter">gender</span>
+         string
+        </li>
+        <li><span class="parameter">shapeshiftStatus</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ShapeshiftedHitpointsChanged"></a>
+    <strong>Osi.ShapeshiftedHitpointsChanged (entity, percentage)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">percentage</span>
+         number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ShareInitiative"></a>
+    <strong>Osi.ShareInitiative (object)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ShortRestCapable"></a>
+    <strong>Osi.ShortRestCapable (character, capable)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">capable</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ShortRestProcessing"></a>
+    <strong>Osi.ShortRestProcessing (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.ShortRested"></a>
+    <strong>Osi.ShortRested (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StackedWith"></a>
+    <strong>Osi.StackedWith (item, stackedWithItem)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">stackedWithItem</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StartAttack"></a>
+    <strong>Osi.StartAttack (defender, attackOwner, attacker, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">defender</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">attackOwner</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">attacker</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StartAttackPosition"></a>
+    <strong>Osi.StartAttackPosition (x, y, z, attackOwner, attacker, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+         number
+        </li>
+        <li><span class="parameter">y</span>
+         number
+        </li>
+        <li><span class="parameter">z</span>
+         number
+        </li>
+        <li><span class="parameter">attackOwner</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">attacker</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StartedDisarmingTrap"></a>
+    <strong>Osi.StartedDisarmingTrap (character, item)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StartedFleeing"></a>
+    <strong>Osi.StartedFleeing (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StartedLockpicking"></a>
+    <strong>Osi.StartedLockpicking (character, item)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StartedPreviewingSpell"></a>
+    <strong>Osi.StartedPreviewingSpell (caster, spell, isMostPowerful, hasMultipleLevels)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">caster</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">spell</span>
+         string
+        </li>
+        <li><span class="parameter">isMostPowerful</span>
+         integer
+        </li>
+        <li><span class="parameter">hasMultipleLevels</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StatusApplied"></a>
+    <strong>Osi.StatusApplied (object, status, causee, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">status</span>
+         string
+        </li>
+        <li><span class="parameter">causee</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StatusAttempt"></a>
+    <strong>Osi.StatusAttempt (object, status, causee, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">status</span>
+         string
+        </li>
+        <li><span class="parameter">causee</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StatusAttemptFailed"></a>
+    <strong>Osi.StatusAttemptFailed (object, status, causee, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">status</span>
+         string
+        </li>
+        <li><span class="parameter">causee</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StatusRemoved"></a>
+    <strong>Osi.StatusRemoved (object, status, causee, applyStoryActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">status</span>
+         string
+        </li>
+        <li><span class="parameter">causee</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">applyStoryActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StatusTagCleared"></a>
+    <strong>Osi.StatusTagCleared (target, tag, sourceOwner, source2, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">tag</span>
+         TAG
+        </li>
+        <li><span class="parameter">sourceOwner</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">source2</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StatusTagSet"></a>
+    <strong>Osi.StatusTagSet (target, tag, sourceOwner, source2, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">tag</span>
+         TAG
+        </li>
+        <li><span class="parameter">sourceOwner</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">source2</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StoppedCombining"></a>
+    <strong>Osi.StoppedCombining (character, item1, item2, item3, item4, item5)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item1</span>
+         ITEM
+        </li>
+        <li><span class="parameter">item2</span>
+         ITEM
+        </li>
+        <li><span class="parameter">item3</span>
+         ITEM
+        </li>
+        <li><span class="parameter">item4</span>
+         ITEM
+        </li>
+        <li><span class="parameter">item5</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StoppedDisarmingTrap"></a>
+    <strong>Osi.StoppedDisarmingTrap (character, item)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StoppedLockpicking"></a>
+    <strong>Osi.StoppedLockpicking (character, item)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.StoppedSneaking"></a>
+    <strong>Osi.StoppedSneaking (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.SubQuestUpdateUnlocked"></a>
+    <strong>Osi.SubQuestUpdateUnlocked (character, subQuestID, stateID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">subQuestID</span>
+         string
+        </li>
+        <li><span class="parameter">stateID</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.SupplyTemplateSpent"></a>
+    <strong>Osi.SupplyTemplateSpent (templateId, amount)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">templateId</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">amount</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.SwarmAIGroupJoined"></a>
+    <strong>Osi.SwarmAIGroupJoined (object, group)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">group</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.SwarmAIGroupLeft"></a>
+    <strong>Osi.SwarmAIGroupLeft (object, group)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">group</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.SwitchedCombat"></a>
+    <strong>Osi.SwitchedCombat (object, oldCombatGuid, newCombatGuid)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">oldCombatGuid</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">newCombatGuid</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TadpolePowerAssigned"></a>
+    <strong>Osi.TadpolePowerAssigned (character, power)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">power</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TagCleared"></a>
+    <strong>Osi.TagCleared (target, tag)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">tag</span>
+         TAG
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TagEvent"></a>
+    <strong>Osi.TagEvent (tag, event)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tag</span>
+         TAG
+        </li>
+        <li><span class="parameter">event</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TagSet"></a>
+    <strong>Osi.TagSet (target, tag)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">tag</span>
+         TAG
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TeleportToFleeWaypoint"></a>
+    <strong>Osi.TeleportToFleeWaypoint (character, trigger)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">trigger</span>
+         TRIGGER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TeleportToFromCamp"></a>
+    <strong>Osi.TeleportToFromCamp (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TeleportToWaypoint"></a>
+    <strong>Osi.TeleportToWaypoint (character, trigger)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">trigger</span>
+         TRIGGER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Teleported"></a>
+    <strong>Osi.Teleported (target, cause, oldX, oldY, oldZ, newX, newY, newZ, spell)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">cause</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">oldX</span>
+         number
+        </li>
+        <li><span class="parameter">oldY</span>
+         number
+        </li>
+        <li><span class="parameter">oldZ</span>
+         number
+        </li>
+        <li><span class="parameter">newX</span>
+         number
+        </li>
+        <li><span class="parameter">newY</span>
+         number
+        </li>
+        <li><span class="parameter">newZ</span>
+         number
+        </li>
+        <li><span class="parameter">spell</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TeleportedFromCamp"></a>
+    <strong>Osi.TeleportedFromCamp (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TeleportedToCamp"></a>
+    <strong>Osi.TeleportedToCamp (character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemplateAddedTo"></a>
+    <strong>Osi.TemplateAddedTo (objectTemplate, object2, inventoryHolder, addType)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">objectTemplate</span>
+         ROOT
+        </li>
+        <li><span class="parameter">object2</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">inventoryHolder</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">addType</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemplateDestroyedBy"></a>
+    <strong>Osi.TemplateDestroyedBy (itemTemplate, item2, destroyer, destroyerOwner, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemTemplate</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">item2</span>
+         ITEM
+        </li>
+        <li><span class="parameter">destroyer</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">destroyerOwner</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemplateEnteredTrigger"></a>
+    <strong>Osi.TemplateEnteredTrigger (itemTemplate, item2, trigger, owner, mover)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemTemplate</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">item2</span>
+         ITEM
+        </li>
+        <li><span class="parameter">trigger</span>
+         TRIGGER
+        </li>
+        <li><span class="parameter">owner</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">mover</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemplateEquipped"></a>
+    <strong>Osi.TemplateEquipped (itemTemplate, character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemTemplate</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemplateKilledBy"></a>
+    <strong>Osi.TemplateKilledBy (characterTemplate, defender, attackOwner, attacker, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">characterTemplate</span>
+         CHARACTERROOT
+        </li>
+        <li><span class="parameter">defender</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">attackOwner</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">attacker</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemplateLeftTrigger"></a>
+    <strong>Osi.TemplateLeftTrigger (itemTemplate, item2, trigger, owner, mover)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemTemplate</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">item2</span>
+         ITEM
+        </li>
+        <li><span class="parameter">trigger</span>
+         TRIGGER
+        </li>
+        <li><span class="parameter">owner</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">mover</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemplateOpening"></a>
+    <strong>Osi.TemplateOpening (itemTemplate, item2, character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemTemplate</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">item2</span>
+         ITEM
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemplateRemovedFrom"></a>
+    <strong>Osi.TemplateRemovedFrom (objectTemplate, object2, inventoryHolder)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">objectTemplate</span>
+         ROOT
+        </li>
+        <li><span class="parameter">object2</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">inventoryHolder</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemplateUnequipped"></a>
+    <strong>Osi.TemplateUnequipped (itemTemplate, character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemTemplate</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemplateUseFinished"></a>
+    <strong>Osi.TemplateUseFinished (character, itemTemplate, item2, sucess)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">itemTemplate</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">item2</span>
+         ITEM
+        </li>
+        <li><span class="parameter">sucess</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemplateUseStarted"></a>
+    <strong>Osi.TemplateUseStarted (character, itemTemplate, item2)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">itemTemplate</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">item2</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemplatesCombined"></a>
+    <strong>Osi.TemplatesCombined (template1, template2, template3, template4, template5, character, newItem)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">template1</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">template2</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">template3</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">template4</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">template5</span>
+         ITEMROOT
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">newItem</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemporaryHostileRelationRemoved"></a>
+    <strong>Osi.TemporaryHostileRelationRemoved (enemy, sourceFaction, targetFaction)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">enemy</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">sourceFaction</span>
+         FACTION
+        </li>
+        <li><span class="parameter">targetFaction</span>
+         FACTION
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TemporaryHostileRelationRequestHandled"></a>
+    <strong>Osi.TemporaryHostileRelationRequestHandled (character1, character2, success)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character1</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">character2</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">success</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TextEvent"></a>
+    <strong>Osi.TextEvent (event)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">event</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TimelineScreenFadeStarted"></a>
+    <strong>Osi.TimelineScreenFadeStarted (userID, dialogInstanceId, dialog2)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">userID</span>
+         integer
+        </li>
+        <li><span class="parameter">dialogInstanceId</span>
+         integer
+        </li>
+        <li><span class="parameter">dialog2</span>
+         DIALOGRESOURCE
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TimerFinished"></a>
+    <strong>Osi.TimerFinished (timer)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">timer</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TradeEnds"></a>
+    <strong>Osi.TradeEnds (character, trader)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">trader</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TradeGenerationEnded"></a>
+    <strong>Osi.TradeGenerationEnded (trader)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">trader</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TradeGenerationStarted"></a>
+    <strong>Osi.TradeGenerationStarted (trader)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">trader</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TurnEnded"></a>
+    <strong>Osi.TurnEnded (object)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TurnStarted"></a>
+    <strong>Osi.TurnStarted (object)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TutorialBoxClosed"></a>
+    <strong>Osi.TutorialBoxClosed (character, message)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">message</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TutorialClosed"></a>
+    <strong>Osi.TutorialClosed (userId, entryId)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">userId</span>
+         integer
+        </li>
+        <li><span class="parameter">entryId</span>
+         GUIDSTRING
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.TutorialEvent"></a>
+    <strong>Osi.TutorialEvent (entity, event)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">event</span>
+         TUTORIALEVENT
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UnequipFailed"></a>
+    <strong>Osi.UnequipFailed (item, character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Unequipped"></a>
+    <strong>Osi.Unequipped (item, character)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.Unlocked"></a>
+    <strong>Osi.Unlocked (item, character, key)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">key</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UnlockedRecipe"></a>
+    <strong>Osi.UnlockedRecipe (character, recipe)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">recipe</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UseFinished"></a>
+    <strong>Osi.UseFinished (character, item, sucess)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+        <li><span class="parameter">sucess</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UseStarted"></a>
+    <strong>Osi.UseStarted (character, item)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">item</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UserAvatarCreated"></a>
+    <strong>Osi.UserAvatarCreated (userID, avatar, daisy)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">userID</span>
+         integer
+        </li>
+        <li><span class="parameter">avatar</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">daisy</span>
+         CHARACTER
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UserCampChestChanged"></a>
+    <strong>Osi.UserCampChestChanged (userID, chest)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">userID</span>
+         integer
+        </li>
+        <li><span class="parameter">chest</span>
+         ITEM
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UserCharacterLongRested"></a>
+    <strong>Osi.UserCharacterLongRested (character, isFullRest)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+         CHARACTER
+        </li>
+        <li><span class="parameter">isFullRest</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UserConnected"></a>
+    <strong>Osi.UserConnected (userID, userName, userProfileID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">userID</span>
+         integer
+        </li>
+        <li><span class="parameter">userName</span>
+         string
+        </li>
+        <li><span class="parameter">userProfileID</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UserDisconnected"></a>
+    <strong>Osi.UserDisconnected (userID, userName, userProfileID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">userID</span>
+         integer
+        </li>
+        <li><span class="parameter">userName</span>
+         string
+        </li>
+        <li><span class="parameter">userProfileID</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UserEvent"></a>
+    <strong>Osi.UserEvent (userID, userEvent)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">userID</span>
+         integer
+        </li>
+        <li><span class="parameter">userEvent</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UserMakeWar"></a>
+    <strong>Osi.UserMakeWar (sourceUserID, targetUserID, war)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">sourceUserID</span>
+         integer
+        </li>
+        <li><span class="parameter">targetUserID</span>
+         integer
+        </li>
+        <li><span class="parameter">war</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UsingSpell"></a>
+    <strong>Osi.UsingSpell (caster, spell, spellType, spellElement, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">caster</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">spell</span>
+         string
+        </li>
+        <li><span class="parameter">spellType</span>
+         string
+        </li>
+        <li><span class="parameter">spellElement</span>
+         string
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UsingSpellAtPosition"></a>
+    <strong>Osi.UsingSpellAtPosition (caster, x, y, z, spell, spellType, spellElement, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">caster</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">x</span>
+         number
+        </li>
+        <li><span class="parameter">y</span>
+         number
+        </li>
+        <li><span class="parameter">z</span>
+         number
+        </li>
+        <li><span class="parameter">spell</span>
+         string
+        </li>
+        <li><span class="parameter">spellType</span>
+         string
+        </li>
+        <li><span class="parameter">spellElement</span>
+         string
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UsingSpellInTrigger"></a>
+    <strong>Osi.UsingSpellInTrigger (caster, spell, spellType, spellElement, trigger, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">caster</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">spell</span>
+         string
+        </li>
+        <li><span class="parameter">spellType</span>
+         string
+        </li>
+        <li><span class="parameter">spellElement</span>
+         string
+        </li>
+        <li><span class="parameter">trigger</span>
+         TRIGGER
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UsingSpellOnTarget"></a>
+    <strong>Osi.UsingSpellOnTarget (caster, target, spell, spellType, spellElement, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">caster</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">target</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">spell</span>
+         string
+        </li>
+        <li><span class="parameter">spellType</span>
+         string
+        </li>
+        <li><span class="parameter">spellElement</span>
+         string
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.UsingSpellOnZoneWithTarget"></a>
+    <strong>Osi.UsingSpellOnZoneWithTarget (caster, target, spell, spellType, spellElement, storyActionID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">caster</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">target</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">spell</span>
+         string
+        </li>
+        <li><span class="parameter">spellType</span>
+         string
+        </li>
+        <li><span class="parameter">spellElement</span>
+         string
+        </li>
+        <li><span class="parameter">storyActionID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.VoiceBarkEnded"></a>
+    <strong>Osi.VoiceBarkEnded (bark, instanceID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bark</span>
+         VOICEBARKRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.VoiceBarkFailed"></a>
+    <strong>Osi.VoiceBarkFailed (bark)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bark</span>
+         VOICEBARKRESOURCE
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.VoiceBarkStarted"></a>
+    <strong>Osi.VoiceBarkStarted (bark, instanceID)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bark</span>
+         VOICEBARKRESOURCE
+        </li>
+        <li><span class="parameter">instanceID</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Osi.WentOnStage"></a>
+    <strong>Osi.WentOnStage (object, isOnStageNow)</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         GUIDSTRING
+        </li>
+        <li><span class="parameter">isOnStageNow</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2023-10-12 22:25:32 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
