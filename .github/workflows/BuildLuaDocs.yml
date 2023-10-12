@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          token: ${{ github.token }}
       - name: Setup Lua
         uses: leafo/gh-actions-lua@v8
         with:
