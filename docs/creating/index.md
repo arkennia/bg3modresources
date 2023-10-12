@@ -20,6 +20,8 @@ See the [references](/bg3modresources/reference) for things like functions and s
   * Substance Painter
 * 3D Modeling Tools ([Blender](https://www.blender.org/) is a good free one)
   * Norbyte created [this](https://github.com/Norbyte/dos2de_collada_exporter) plugin for Blender for working with the game files.
+  * Padme's [Blender Addons](https://www.nexusmods.com/baldursgate3/mods/346?tab=files)
+    * The LOD one in particular is important.
 * [BG3 Script Extender](https://github.com/Norbyte/bg3se)
 * [BG3 Modders Multitool](https://github.com/ShinyHobo/BG3-Modders-Multitool)
 * [ConverterApp/LSLib](https://github.com/Norbyte/lslib)
