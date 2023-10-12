@@ -22,11 +22,13 @@ jobs:
         uses: lunarmodules/ldoc@v1
         with:
             args: ./docs/reference/.
+      - name: Move folder to docs
+        run: echo "mv ./doc/* ./docs/reference/"
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Lua docs
-          repository: ./doc/.
+          repository: ./docs/.
           branch: lua-doc
           create_branch: true
 
