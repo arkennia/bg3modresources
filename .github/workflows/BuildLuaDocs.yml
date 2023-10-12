@@ -13,6 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Generate docs with LDoc
-        uses: lunarmodules/ldoc@v1.5
+        uses: lunarmodules/ldoc@v1
         with:
             args: ./docs/reference/.
