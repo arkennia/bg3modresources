@@ -1,5 +1,10 @@
 name: LDoc
-on: [ ]
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - '**.lua'
 jobs:
   sile:
     runs-on: ubuntu-latest
