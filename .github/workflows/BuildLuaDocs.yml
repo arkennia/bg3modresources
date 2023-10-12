@@ -12,7 +12,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Generate docs with LDoc
-        uses: lunarmodules/ldoc@v1
+      - name: Setup Lua
+        uses: leafo/gh-actions-lua@v8
         with:
-            args: ./docs/reference/.
+          luaVersion: 5.4
+      - name: Setup Lua Rocks
+        uses: leafo/gh-actions-luarocks@v4
+      - name: Setup dependencies
+        run: luarocks install --only-deps ldoc-dev-1.rockspec
+      - name: Build docs
+        run: make doc-site
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Lua docs
+          repository: ./docs/reference/.
+
