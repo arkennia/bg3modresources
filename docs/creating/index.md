@@ -48,3 +48,7 @@ A guide from ID-10T Bot on how to create icons for spells/skills/items.
 
 [Recoloring Vanilla Weapons](/bg3modresources/creating/guides/recoloring)  
 A guide by me for recoloring vanilla weapons.
+
+[Multitool Mod Workspace Format](https://github.com/ShinyHobo/BG3-Modders-Multitool/wiki/Mod-Workspace-Structure)  
+Multitool Wiki page on how to set up your mod workspace for auto conversion and other handy tips!  
+  
