@@ -5,7 +5,7 @@ title: Recoloring Vanilla Weapons Tutorial
 - [Recoloring Vanilla Weapons](#recoloring-vanilla-weapons)
   - [Setting Up Your Workspace](#setting-up-your-workspace)
   - [How to Generate new UUIDs and Handles](#how-to-generate-new-uuids-and-handles)
-  - [Meta.lsx](#metalsx)
+  - [meta.lsx](#metalsx)
   - [Localization File](#localization-file)
   - [RootTemplate Creation](#roottemplate-creation)
     - [Basic Information](#basic-information)
@@ -71,7 +71,7 @@ Before we really get into the creation of the mod, the first thing that you shou
 2. To generate a new UUID, simply click the Generate button, and then click inside the box. It will copy the UUID to the ckeyboard. To generate handles, simply check the Handle box and repeat the same process as with UUIDs.  
     *Note: Make sure to only have the Handle box checked when generating handles for Localization.*
 
-## Meta.lsx
+## meta.lsx
 
 The very first file to edit will be the `meta.lsx` file inside of the folder `Glaive_Revamped\Mods\Glaive_Revamped\meta.lsx`. This is where the general information about your mod is stored. Here are the contents of the file:  
 ```xml
@@ -288,11 +288,11 @@ To find these pieces of information, open up the Multitool. Click the "Search In
 3. In the drop down, select `item` as the game object type. In the search field, put in the item you're looking for. In my case it will be "Glaive". click through the menu's until you find the item you're looking for. I want the Glaive +2, so I selected `WPN_HUM_Glaive_A_2`. You should get something like this:
 ![glaive](../../images/recoloring/glaive.png)
 4. Click the "Attributes" tab on the right, see more information regarding the weapon. We can find the following pieces: 
-    * ParentTemplateID: `bc1c2a84-27f5-46e4-b4b4-0f5ca534469c`  
+    * ParentTemplateID: `99f3b2d9-e03d-4cd5-9a67-5435a95682da`  
     * PhysicsTemplate: `5a6acc22-4359-0d52-0a08-a6ad2fb16f21`
     * EquipmentTypeID: `5e004b79-461d-4617-bb0f-eef0e0ae1232`
     * Icon: `Item_WPN_HUM_Glaive_A_2`
-*Note: This is the `MapKey` for the Glaive here, because we want to make something based on this item, so we will inherit from it by setting it as our ParentTemplateID.*
+
 
 With these pieces of information, go back to the Roottemplate(merged.lsf.lsx) and edit the apporiate fields:
 ```xml
@@ -301,7 +301,7 @@ With these pieces of information, go back to the Roottemplate(merged.lsf.lsx) an
 ...
 <attribute id="Icon" type="FixedString" value="Item_WPN_HUM_Glaive_A_2" />
 ...
-<attribute id="ParentTemplateId" type="FixedString" value="bc1c2a84-27f5-46e4-b4b4-0f5ca534469c" />
+<attribute id="ParentTemplateId" type="FixedString" value="99f3b2d9-e03d-4cd5-9a67-5435a95682da" />
 <attribute id="PhysicsTemplate" type="FixedString" value="5a6acc22-4359-0d52-0a08-a6ad2fb16f21" />
 ```
 
