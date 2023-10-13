@@ -2,9 +2,7 @@
 layout: default
 title: Scripting
 ---
-
-[Osiris Lua Docs](/bg3modresources/reference/luadocs/)  
-Reference for the Osiris calls in Script Extender.
+Reference for the Osiris calls in Script Extender: [Osiris Lua Docs](/bg3modresources/reference/luadocs/)  
 
 - [Aliases](#aliases)
   - [Equipment Slots](#equipment-slots)
