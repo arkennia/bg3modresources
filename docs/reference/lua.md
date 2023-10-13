@@ -26,7 +26,6 @@ Reference for the Osiris calls in Script Extender.
 # Aliases
 
 ## Equipment Slots
-The names of the equipment slots:  
 
 ```lua
 EQUIPMENTSLOTNAME
@@ -37,8 +36,8 @@ EQUIPMENTSLOTNAME
 "Cloak"|
 "Gloves"|
 "Helmet"|
-"Melee Main Weapon"
-|"Melee Offhand Weapon"|
+"Melee Main Weapon"|
+"Melee Offhand Weapon"|
 "Ranged Main Weapon"|
 "Ranged Offhand Weapon"|
 "Ring"|
