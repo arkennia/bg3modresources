@@ -4,7 +4,7 @@ title: Scripting
 ---
 
 [Osiris Lua Docs](/bg3modresources/reference/luadocs/)  
-Referenc for the Osiris calls in Script Extender.
+Reference for the Osiris calls in Script Extender.
 
 - [Aliases](#aliases)
   - [Equipment Slots](#equipment-slots)
