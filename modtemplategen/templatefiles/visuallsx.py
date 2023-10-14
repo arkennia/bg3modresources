@@ -58,7 +58,7 @@ def template():
                             <attribute id="UniformName" type="FixedString" value="FloatParameter_Reflectance" />
                             <attribute id="Value" type="float" value="0.5" />
                         </node>
-                        <node id="Texture2DParameters"> <-- DO NOT REMOVE THIS. I don't know why its here, but it doenst work without it. -->
+                        <node id="Texture2DParameters"> <!-- DO NOT REMOVE THIS. I don't know why its here, but it doenst work without it. -->
                             <attribute id="Enabled" type="bool" value="False" />
                             <attribute id="ExportAsPreset" type="bool" value="True" />
                             <attribute id="GroupName" type="FixedString" value="" />

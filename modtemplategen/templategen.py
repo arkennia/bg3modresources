@@ -1,5 +1,5 @@
 from argparse import ArgumentParser, ArgumentError
-from templatefiles import metalsx, icon_itemslsx, icontexturebanklsx, visuallsx, roottemplatelsx
+from templatefiles import metalsx, icon_itemslsx, icontexturebanklsx, visuallsx, roottemplatelsx, locatemplate
 import os
 
 
@@ -21,17 +21,11 @@ parser.add_argument("name", help="the name of your mod.")
 
 parser.add_argument("dest", default=".", help="the target destination.")
 
-parser.add_argument(
-    "-i", help="use this option if you will be adding icons.", action='store_true'
-)
+parser.add_argument("-i", help="use this option if you will be adding icons.", action="store_true")
 
-parser.add_argument(
-    "-t", help="use this option if you will be adding textures.", action='store_true'
-)
+parser.add_argument("-t", help="use this option if you will be adding textures.", action="store_true")
 
-parser.add_argument(
-    "-s", help="use this if you will be using script extender.", action='store_true'
-)
+parser.add_argument("-s", help="use this if you will be using script extender.", action="store_true")
 
 args = parser.parse_args()
 
@@ -56,6 +50,7 @@ os.chdir(os.path.join(dest, folder))
 print(os.getcwd())
 
 os.makedirs("./Localization/English")
+createTemplate(f"./Localization/English/{modname}.loca.xml", locatemplate.template())
 
 os.makedirs(f"./Mods/{folder}")
 createTemplate(f"./Mods/{folder}/meta.lsx", metalsx.template(modname, folder))
@@ -64,6 +59,7 @@ os.makedirs(f"./Public/{folder}")
 
 if args.i is True:
     os.makedirs("./Public/Game/GUI/Assets/Tooltips/ItemIcons")
+    os.makedirs("./Public/Game/GUI/Assets/Tooltips/Icons")
     os.makedirs(f"./Public/{folder}/Assets/Textures/Icons")
     os.makedirs(f"./Public/{folder}/Content/UI/[PAK]_UI")
     os.makedirs(f"./Public/{folder}/GUI/")
