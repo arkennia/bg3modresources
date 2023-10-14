@@ -28,6 +28,7 @@ See the [references](/bg3modresources/reference) for things like functions and s
 * [7zip](https://7-zip.org/)
 * [Mod Workspace Generator](https://github.com/arkennia/bg3modresources/tree/master/modtemplategen)
   * Simple tool created by me to generate template workspaces. WIP, beta, Etc so use at your own peril.
+  * A simple how-to on using the template generator can be found [here](/bg3modresources/creating/guides/templategen).
 
 # Example Mods
 [Sample Equipment Mod](https://www.nexusmods.com/baldursgate3/mods/249)  
