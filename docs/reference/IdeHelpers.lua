@@ -4986,7 +4986,7 @@ local Ext_Resource = {}
 
 
 
---- @class Ext_StaticData
+--- @type Ext_StaticData
 --- @field Get fun(a1:Guid, a2:ExtResourceManagerType)
 --- @field GetAll fun(a1:ExtResourceManagerType):Guid[]
 local Ext_StaticData = {}
