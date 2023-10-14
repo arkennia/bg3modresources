@@ -32,14 +32,15 @@ options:
   -t          use this option if you will be adding textures.
   -s          use this if you will be using script extender.
 ```
-dest is the folder you want it to create the template in.
-The -i option adds the folder and files needed for dealign with icons.
-The -t option adds *basic* folders/files for textures, obviously your specific use will likely need more folders and files.
-The -s option adds the basic files and folders for a mod that uses the script extender
+  
+dest is the folder you want it to create the template in.  
+The -i option adds the folder and files needed for dealign with icons.  
+The -t option adds *basic* folders/files for textures, obviously your specific use will likely need more folders and files.  
+The -s option adds the basic files and folders for a mod that uses the script extender  
 
 ### Example Usage
 
-`python templategen.py -its Template .`
+`python templategen.py -its TemplateMod .`
 
 Will create the following structure in the current directory.
 
