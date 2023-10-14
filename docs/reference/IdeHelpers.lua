@@ -4906,7 +4906,7 @@ local Ext_IO = {}
 
 
 
---- @class type
+--- @type Ext_Json
 --- @field Parse fun()
 --- @field Stringify fun()
 local Ext_Json = {}
