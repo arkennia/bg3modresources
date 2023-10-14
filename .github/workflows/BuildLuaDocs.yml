@@ -21,7 +21,7 @@ jobs:
       - name: Generate docs with LDoc
         uses: lunarmodules/ldoc@v1
         with:
-            args: -a -d ./docs/reference/luadocs/. ./docs/reference/.
+            args: --multimodule -a -d ./docs/reference/luadocs/. ./docs/reference/.
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
