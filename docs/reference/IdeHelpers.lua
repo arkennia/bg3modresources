@@ -14,21 +14,22 @@ PersistentVars = {}
 
 --- @alias OsirisValue number|string
 
---- Using a DB like a function will allow inserting new values into the database (ex. `Osi.DB_IsPlayer("02a77f1f-872b-49ca-91ab-32098c443beb")`  
+--- Using a DB like a function will allow inserting new values into the database (ex. `Osi.DB_IsPlayer("02a77f1f-872b-49ca-91ab-32098c443beb")`
 --- @overload fun(...:OsirisValue|nil)
 --- @class OsiDatabase
-local OsiDatabase = {}
---- Databases can be read using the Get method. The method checks its parameters against the database and only returns rows that match the query.  
---- The number of parameters passed to Get must be equivalent to the number of columns in the target database.  
---- Each parameter defines an (optional) filter on the corresponding column.  
+-- local OsiDatabase = {}
+--- Databases can be read using the Get method. The method checks its parameters against the database and only returns rows that match the query.
+--- The number of parameters passed to Get must be equivalent to the number of columns in the target database.
+--- Each parameter defines an (optional) filter on the corresponding column.
 --- If the parameter is nil, the column is not filtered (equivalent to passing _ in Osiris). If the parameter is not nil, only rows with matching values will be returned.
 --- @vararg OsirisValue|nil
 --- @return table<integer,table<integer,OsirisValue>>
 function OsiDatabase:Get(...) end
---- The Delete method can be used to delete rows from databases.  
---- The number of parameters passed to Delete must be equivalent to the number of columns in the target database.  
---- Each parameter defines an (optional) filter on the corresponding column.  
---- If the parameter is nil, the column is not filtered (equivalent to passing _ in Osiris). If the parameter is not nil, only rows with matching values will be deleted. 
+
+--- The Delete method can be used to delete rows from databases.
+--- The number of parameters passed to Delete must be equivalent to the number of columns in the target database.
+--- Each parameter defines an (optional) filter on the corresponding column.
+--- If the parameter is nil, the column is not filtered (equivalent to passing _ in Osiris). If the parameter is not nil, only rows with matching values will be deleted.
 --- @vararg OsirisValue|nil
 function OsiDatabase:Delete(...) end
 
@@ -43,7 +44,7 @@ function OsiDatabase:Delete(...) end
 --- @field DB_CombatCharacters OsiDatabase|fun(Guid:string, combatID:integer) All characters in combat
 --- @field DB_Dialogs OsiDatabase|fun(Guid:string, dialog:string)|fun(GUID1:string, GUID2:string, dialog:string)|fun(GUID1:string, GUID2:string, GUID3:string, dialog:string)|fun(GUID1:string, GUID2:string, GUID3:string, GUID4:string, dialog:string) All registered dialogs for objects, the most common being the version with a single character
 
---- The Osi table contains databases as well as calls, queries, events, and custom PROC / QRY defintions, as long as they are used in a script.  
+--- The Osi table contains databases as well as calls, queries, events, and custom PROC / QRY defintions, as long as they are used in a script.
 --- @type OsiCommonDatabases|OsiDynamic
 Osi = {}
 
@@ -357,11 +358,11 @@ Osi = {}
 --- @field getLineMetrics fun(lineIndex:integer):flash.text:TextLineMetrics Returns metrics information about a given text line.
 --- @field getLineOffset fun(lineIndex:integer):integer Returns the character index of the first character in the line that the lineIndex parameter specifies.
 --- @field getLineText fun(lineIndex:integer):string Returns the text of the line specified by the lineIndex parameter.
---- @field getParagraphLength fun(charIndex:integer):integer Given a character index, returns the length of the paragraph containing the given character.	
+--- @field getParagraphLength fun(charIndex:integer):integer Given a character index, returns the length of the paragraph containing the given character.
 --- @field getTextFormat fun(beginIndex:integer, endIndex:integer):flash.text:TextFormat Returns a TextFormat object that contains formatting information for the range of text that the beginIndex and endIndex parameters specify.
 --- @field isFontCompatible fun(fontName:string, fontStyle:string):boolean [static] Returns true if an embedded font is available with the specified fontName and fontStyle where Font.fontType is flash.text.FontType.EMBEDDED.
---- @field replaceSelectedText fun(value:string) Replaces the current selection with the contents of the value parameter.	
---- @field replaceText fun(beginIndex:integer, endIndex:integer, newText:string) Replaces the range of characters that the beginIndex and endIndex parameters specify with the contents of the newText parameter.	
+--- @field replaceSelectedText fun(value:string) Replaces the current selection with the contents of the value parameter.
+--- @field replaceText fun(beginIndex:integer, endIndex:integer, newText:string) Replaces the range of characters that the beginIndex and endIndex parameters specify with the contents of the newText parameter.
 --- @field setSelection fun(beginIndex:integer, endIndex:integer) Sets as selected the text designated by the index values of the first and last characters, which are specified with the beginIndex and endIndex parameters.
 --- @field setTextFormat fun(FlashTextFormat, beginIndex:integer, endIndex:integer) Applies the text formatting that the format parameter specifies to the specified text in a text field.
 
@@ -1893,7 +1894,7 @@ Osi = {}
 --- @field Tags string[]
 --- @field TargetModes FixedString[]
 
---- Separate from ModuleInfo, this is a table with specific keys.  
+--- Separate from ModuleInfo, this is a table with specific keys.
 --- @class LegacyModuleInfo
 --- @field UUID FixedString
 --- @field Name string
@@ -5041,14 +5042,11 @@ local Ext_Types = {}
 --- @field UseBaseExtraData boolean Only include the base ExtraData keys/values in Shared, instead of grabbing whatever the current keys are in the mod environment.
 --- @field GenerateExtraDataAsClass boolean Annotate ExtraData as a class, so it only has fields with no fixed/hardcoded values.
 
---- Generate an ExtIdeHelpers file  
---- @param outputPath string|nil Optional path to save the generated helper file, relative to the `Documents\Larian Studios\Divinity Original Sin 2 Definitive Edition\Osiris Data` folder  
---- @param addOsi boolean|nil If true, all Osiris functions will be included in the Osi global table. This is optional, due to the possible performance cost of having so many functions  
+--- Generate an ExtIdeHelpers file
+--- @param outputPath string|nil Optional path to save the generated helper file, relative to the `Documents\Larian Studios\Divinity Original Sin 2 Definitive Edition\Osiris Data` folder
+--- @param addOsi boolean|nil If true, all Osiris functions will be included in the Osi global table. This is optional, due to the possible performance cost of having so many functions
 --- @return string fileContents Returns the file contents, for use with Ext.IO.SaveFile
 function Ext_Types.GenerateIdeHelpers(outputPath, addOsi) end
-
-
-
 
 --- @class ComponentHandleProxy:userdata
 --- @field Get (fun():IEoCServerObject|IEoCClientObject)
@@ -5057,11 +5055,11 @@ function Ext_Types.GenerateIdeHelpers(outputPath, addOsi) end
 --- @field Salt uint32
 --- @field Index uint32
 
---- ## Synchronization 
---- A variable is only eligible for synchronization if: 
---- * Both `Server` and `Client` is true. 
---- * For server to client synchronization, both `WriteableOnServer` and `SyncToClient` is true. 
---- * For client to server synchronization, both `WriteableOnClient` and `SyncToServer` is true. 
+--- ## Synchronization
+--- A variable is only eligible for synchronization if:
+--- * Both `Server` and `Client` is true.
+--- * For server to client synchronization, both `WriteableOnServer` and `SyncToClient` is true.
+--- * For client to server synchronization, both `WriteableOnClient` and `SyncToServer` is true.
 --- @class RegisterUserVariableOptions
 --- @field Server boolean Variable is present on server entities. Defaults to `true`.
 --- @field Client boolean Variable is present on client entities. Defaults to `false`.
@@ -5143,69 +5141,69 @@ local Ext_Enums = {}
 --- @field Types Ext_Types
 --- @field Utils Ext_Utils
 --- @field Enums Ext_Enums
-Ext = {Events = {}}
+Ext = { Events = {} }
 
 
 --- @class SubscribableEvent<T>:{ (Subscribe:fun(self:SubscribableEvent, callback:fun(e:T|LuaEventBase), opts:{Priority:integer, Once:boolean}|nil):integer), (Unsubscribe:fun(self:SubscribableEvent, index:integer))}
 
---- Developer functions for the SubscribableEvent type. 
---- Throw can be used to manually throw the event, but special care may be needed to ensure the table used for the event data is valid.  
+--- Developer functions for the SubscribableEvent type.
+--- Throw can be used to manually throw the event, but special care may be needed to ensure the table used for the event data is valid.
 --- @class SubscribableEventDev<T>:{ (Throw:fun(self:SubscribableEvent, e:T|LuaEventBase))}
 
 --#region Extender Events
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<LuaEmptyEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<LuaEmptyEvent>
 Ext.Events.DoConsoleCommand = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<EclLuaGameStateChangeEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<EclLuaGameStateChangeEvent>
 Ext.Events.EclLuaGameStateChange = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<LuaEmptyEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<LuaEmptyEvent>
 Ext.Events.Empty = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<EsvLuaAfterExecuteFunctorEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<EsvLuaAfterExecuteFunctorEvent>
 Ext.Events.EsvLuaAfterExecuteFunctor = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<EsvLuaBeforeDealDamageEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<EsvLuaBeforeDealDamageEvent>
 Ext.Events.EsvLuaBeforeDealDamage = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<EsvLuaDealDamageEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<EsvLuaDealDamageEvent>
 Ext.Events.EsvLuaDealDamage = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<EsvLuaDoConsoleCommandEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<EsvLuaDoConsoleCommandEvent>
 Ext.Events.EsvLuaDoConsoleCommand = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<EsvLuaExecuteFunctorEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<EsvLuaExecuteFunctorEvent>
 Ext.Events.EsvLuaExecuteFunctor = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<EsvLuaGameStateChangeEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<EsvLuaGameStateChangeEvent>
 Ext.Events.EsvLuaGameStateChange = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<LuaEmptyEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<LuaEmptyEvent>
 Ext.Events.GameStateChanged = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<LuaEmptyEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<LuaEmptyEvent>
 Ext.Events.ModuleLoadStarted = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<LuaEmptyEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<LuaEmptyEvent>
 Ext.Events.ModuleLoading = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<LuaEmptyEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<LuaEmptyEvent>
 Ext.Events.ModuleResume = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<LuaEmptyEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<LuaEmptyEvent>
 Ext.Events.ResetCompleted = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<LuaEmptyEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<LuaEmptyEvent>
 Ext.Events.SessionLoaded = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<LuaEmptyEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<LuaEmptyEvent>
 Ext.Events.SessionLoading = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<LuaEmptyEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<LuaEmptyEvent>
 Ext.Events.StatsLoaded = {}
---- 🔨🔧**Server/Client**🔧🔨  
---- @type SubscribableEvent<LuaTickEvent>  
+--- 🔨🔧**Server/Client**🔧🔨
+--- @type SubscribableEvent<LuaTickEvent>
 Ext.Events.Tick = {}
 --#endregion
 
@@ -5239,21 +5237,21 @@ _D = Ext.Dump
 --- Console window shortcut for Ext.Utils.Print
 _P = Ext.Utils.Print
 
---- Console window helper to get current player character 
---- This is the host on the server, or the hotbar character on the client  
+--- Console window helper to get current player character
+--- This is the host on the server, or the hotbar character on the client
 --- @return EsvCharacter|EclCharacter
 _C = function() end
 
---- Console window helper to get character being examined on the client-side  
+--- Console window helper to get character being examined on the client-side
 --- @return EclCharacter
 _E = function() end
 
---- Console window helper to get the host's equipped weapon on the server-side  
+--- Console window helper to get the host's equipped weapon on the server-side
 --- @return EsvItem
 _W = function() end
 
---- Helper for dumping variables to the console  
---- This is essentially `Ext.Utils.Print(Ext.DumpExport(val))`  
+--- Helper for dumping variables to the console
+--- This is essentially `Ext.Utils.Print(Ext.DumpExport(val))`
 --- @param val any
 function Ext.Dump(val) end
 
@@ -5262,7 +5260,7 @@ function Ext.Dump(val) end
 --- @return string
 function Ext.DumpExport(val) end
 
---- Register a callback that runs on the next tick, and is then unregistered afterwards  
+--- Register a callback that runs on the next tick, and is then unregistered afterwards
 --- @param callback fun(e:LuaTickEventParams)
 function Ext.OnNextTick(callback) end
 
@@ -5273,7 +5271,7 @@ function Ext.OnNextTick(callback) end
 
 --- Registers a new skill property that can be triggered via SkillProperties
 --- Stat syntax: data"SkillProperties""EXT:<PROPERTY_NAME>[,<int>,<int>,<string>,<int>,<int>]"
---- The property name must always be preceded by the string "EXT:". 
+--- The property name must always be preceded by the string "EXT:".
 --- Target contexts (SELF:, TARGET:, ...) and useing multiple actions in the same SkillProperties are supported
 --- Conditions for EXT: properties (i.e. "IF(COND):") are _NOT YET_ supported
 --- @param name string Skill property name
@@ -5424,341 +5422,340 @@ function Ext.GetGameState() end
 --#region ExtraData
 
 Ext.ExtraData = {
-	["NPC max combat turn time"] = 20.0,
-	["ThrowDistanceMin"] = 3.0,
-	["ThrowDistanceMax"] = 18.0,
-	["ThrowStrengthCapMultiplier"] = 0.20000000298023,
-	["ThrowWeightMultiplier"] = 2.0,
-	["Telekinesis Range"] = 4.0,
-	["End Of Combat SightRange Multiplier"] = 3.0,
-	["Sneak Damage Multiplier"] = 1.0,
-	["Infectious Disease Depth"] = 5.0,
-	["Infectious Disease Radius"] = 5.0,
-	["Haste Speed Modifier"] = 1.5,
-	["Slow Speed Modifier"] = 0.80000001192093,
-	["Ally Joins Ally SightRange Multiplier"] = 2.5,
-	["Surface Distance Evaluation"] = 2.0,
-	["Once Per Combat Spell Realtime Cooldown"] = 1.0,
-	["HintDuration"] = 5.0,
-	["Projectile Terrain Offset"] = 3.0,
-	["Surface Clear Owner Time"] = 1.0,
-	["Decaying Touch Damage Modifier"] = 1.0,
-	["FirstItemTypeShift"] = 9.0,
-	["SecondItemTypeShift"] = 16.0,
-	["PickpocketGoldValuePerPoint"] = 50.0,
-	["PickpocketWeightPerPoint"] = 2000.0,
-	["PickpocketExperienceLevelsPerPoint"] = 4.0,
-	["PersuasionAttitudeBonusPerPoint"] = 5.0,
-	["AbilityBaseValue"] = 10.0,
-	["AbilityCharCreationBonus"] = 1.0,
-	["AbilityLevelGrowth"] = 0.0,
-	["AbilityBoostGrowth"] = 0.0,
-	["AbilityGrowthDamp"] = 0.0,
-	["AbilitySoftCap"] = 40.0,
-	["WitsGrowthDamp"] = 0.0,
-	["VitalityStartingAmount"] = 21.0,
-	["VitalityExponentialGrowth"] = 1.25,
-	["VitalityLinearGrowth"] = 9.0909996032715,
-	["VitalityToDamageRatio"] = 5.0,
-	["VitalityToDamageRatioGrowth"] = 0.20000000298023,
-	["ExpectedDamageBoostFromAbilityPerLevel"] = 0.064999997615814,
-	["ExpectedDamageBoostFromSpellSchoolPerLevel"] = 0.014999999664724,
-	["ExpectedDamageBoostFromWeaponSkillPerLevel"] = 0.025000000372529,
-	["ExpectedConGrowthForArmorCalculation"] = 1.0,
-	["FirstVitalityLeapLevel"] = 9.0,
-	["FirstVitalityLeapGrowth"] = 1.25,
-	["SecondVitalityLeapLevel"] = 13.0,
-	["SecondVitalityLeapGrowth"] = 1.25,
-	["ThirdVitalityLeapLevel"] = 16.0,
-	["ThirdVitalityLeapGrowth"] = 1.25,
-	["FourthVitalityLeapLevel"] = 18.0,
-	["FourthVitalityLeapGrowth"] = 1.3500000238419,
-	["DamageBoostFromAbility"] = 0.050000000745058,
-	["MonsterDamageBoostPerLevel"] = 0.019999999552965,
-	["PhysicalArmourBoostFromAbility"] = 0.0,
-	["MagicArmourBoostFromAbility"] = 0.0,
-	["VitalityBoostFromAbility"] = 0.070000000298023,
-	["DodgingBoostFromAbility"] = 0.0,
-	["HealToDamageRatio"] = 1.2999999523163,
-	["ArmorToVitalityRatio"] = 0.55000001192093,
-	["ArmorRegenTimer"] = 0.0099999997764826,
-	["ArmorRegenConstGrowth"] = 1.0,
-	["ArmorRegenPercentageGrowth"] = 10.0,
-	["ArmorAfterHitCooldown"] = -7.0,
-	["MagicArmorRegenTimer"] = 0.0099999997764826,
-	["MagicArmorRegenConstGrowth"] = 1.0,
-	["MagicArmorRegenPercentageGrowth"] = 10.0,
-	["MagicArmorAfterHitCooldown"] = -7.0,
-	["ArmorHeadPercentage"] = 0.15000000596046,
-	["ArmorUpperBodyPercentage"] = 0.30000001192093,
-	["ArmorLowerBodyPercentage"] = 0.20000000298023,
-	["ArmorShieldPercentage"] = 0.5,
-	["ArmorHandsPercentage"] = 0.15000000596046,
-	["ArmorFeetPercentage"] = 0.15000000596046,
-	["ArmorAmuletPercentage"] = 0.11999999731779,
-	["ArmorRingPercentage"] = 0.079999998211861,
-	["CharacterBaseMemoryCapacity"] = 100.0,
-	["CharacterBaseMemoryCapacityGrowth"] = 0.5,
-	["CharacterAbilityPointsPerMemoryCapacity"] = 1.0,
-	["CombatSkillCap"] = 10.0,
-	["CombatSkillLevelGrowth"] = 100.0,
-	["CombatSkillNpcGrowth"] = 0.0,
-	["CombatSkillDamageBonus"] = 5.0,
-	["CombatSkillCritBonus"] = 1.0,
-	["CombatSkillCritMultiplierBonus"] = 5.0,
-	["CombatSkillAccuracyBonus"] = 5.0,
-	["CombatSkillDodgingBonus"] = 1.0,
-	["CombatSkillReflectionBonus"] = 5.0,
-	["NumStartingCivilSkillPoints"] = 2.0,
-	["CivilSkillCap"] = 5.0,
-	["CivilSkillLevelGrowth"] = 100.0,
-	["CivilPointOffset"] = 0.0,
-	["SavethrowLowChance"] = 15.0,
-	["SavethrowHighChance"] = 50.0,
-	["SavethrowBelowLowPenalty"] = 5.0,
-	["SavethrowPenaltyCap"] = -30.0,
-	["CriticalBonusFromWits"] = 1.0,
-	["InitiativeBonusFromWits"] = 1.0,
-	["WeaponAccuracyPenaltyPerLevel"] = -20.0,
-	["WeaponAccuracyPenaltyCap"] = -80.0,
-	["ShieldAPCost"] = 0.0,
-	["WeaponWeightLight"] = 500.0,
-	["WeaponWeightMedium"] = 1050.0,
-	["WeaponWeightHeavy"] = 2600.0,
-	["WeaponWeightGiant"] = 8200.0,
-	["HighGroundThreshold"] = 2.2999999523163,
-	["LowGroundAttackRollPenalty"] = -2.0,
-	["HighGroundAttackRollBonus"] = 2.0,
-	["LowGroundMeleeRange"] = 0.0,
-	["HighGroundMeleeRange"] = 0.5,
-	["HighGroundRangeMultiplier"] = 1.0,
-	["SneakDefaultAPCost"] = 1.0,
-	["BlindRangePenalty"] = 3.0,
-	["RangeBoostedGlobalCap"] = 30.0,
-	["SurfaceDurationFromHitFloorReaction"] = 18.0,
-	["SurfaceDurationFireIgniteOverride"] = 12.0,
-	["SurfaceDurationFromCharacterBleeding"] = -1.0,
-	["SurfaceDurationAfterDecay"] = -1.0,
-	["SmokeDurationAfterDecay"] = 6.0,
-	["DualWieldingAPPenalty"] = 2.0,
-	["DualWieldingDamagePenalty"] = 0.5,
-	["ChanceToSetStatusOnContact"] = 100.0,
-	["SkillPhysArmorBonusBase"] = 5.0,
-	["SkillPhysArmorBonusPerPoint"] = 2.0,
-	["SkillPhysArmorBonusMax"] = 5.0,
-	["SkillMagicArmorBonusBase"] = 5.0,
-	["SkillMagicArmorBonusPerPoint"] = 2.0,
-	["SkillMagicArmorBonusMax"] = 5.0,
-	["SkillVitalityBonusBase"] = 3.0,
-	["SkillVitalityBonusPerPoint"] = 1.0,
-	["SkillVitalityBonusMax"] = 3.0,
-	["SpellSchoolDamageToPhysicalArmorPerPoint"] = 0.0,
-	["SpellSchoolDamageToMagicArmorPerPoint"] = 0.0,
-	["SpellSchoolArmorRestoredPerPoint"] = 5.0,
-	["SpellSchoolVitalityRestoredPerPoint"] = 5.0,
-	["SpellSchoolHighGroundBonusPerPoint"] = 5.0,
-	["SpellSchoolFireDamageBoostPerPoint"] = 5.0,
-	["SpellSchoolPoisonAndEarthDamageBoostPerPoint"] = 5.0,
-	["SpellSchoolAirDamageBoostPerPoint"] = 5.0,
-	["SpellSchoolWaterDamageBoostPerPoint"] = 5.0,
-	["SpellSchoolPhysicalDamageBoostPerPoint"] = 5.0,
-	["SpellSchoolSulfuricDamageBoostPerPoint"] = 5.0,
-	["SpellSchoolLifeStealPerPoint"] = 10.0,
-	["SpiritVisionFallbackRadius"] = 10.0,
-	["AiCoverProjectileTurnMemory"] = 2.0,
-	["CarryWeightBase"] = 40.0,
-	["CarryWeightPerStr"] = 10000.0,
-	["DeflectProjectileRange"] = 1.0,
-	["CleaveRangeOverride"] = 125.0,
-	["FleeDistance"] = 13.0,
-	["GlobalGoldValueMultiplier"] = 1.0,
-	["PriceBarterCoefficient"] = 0.10000000149012,
-	["PriceAttitudeCoefficient"] = 0.0049999998882413,
-	["PriceRoundToFiveAfterAmount"] = 100.0,
-	["PriceRoundToTenAfterAmount"] = 1000.0,
-	["GMCharacterAbilityCap"] = 100.0,
-	["GMCharacterArmorCap"] = 999999.0,
-	["GMCharacterResistanceMin"] = -1000.0,
-	["GMCharacterResistanceMax"] = 1000.0,
-	["GMCharacterAPCap"] = 100.0,
-	["GMCharacterSPCap"] = 3.0,
-	["GMItemLevelCap"] = 50.0,
-	["GMItemAbilityCap"] = 100.0,
-	["GMItemArmorMin"] = -999999.0,
-	["GMItemArmorMax"] = 999999.0,
-	["GMItemResistanceMin"] = -1000.0,
-	["GMItemResistanceMax"] = 1000.0,
-	["TraderDroppedItemsPercentage"] = 51.0,
-	["TraderDroppedItemsCap"] = 3.0,
-	["TraderDonationsRequiredAttitude"] = -45.0,
-	["TeleportUnchainDistance"] = 50.0,
-	["FlankingElevationThreshold"] = 1.2000000476837,
-	["DefaultDC"] = 15.0,
-	["FallDamageBaseDamage"] = 0.0099999997764826,
-	["FallDamageMinimumDistance"] = 4.0,
-	["FallDamageMaximumDistance"] = 21.0,
-	["FallDamageDamageType"] = 3.0,
-	["FallDamagePronePercent"] = 0.25,
-	["FallDamageMultiplierHugeGargantuan"] = 2.0,
-	["FallImpactPushDistance"] = 2.0,
-	["FallImpactConstant"] = 4.9999998736894e-06,
-	["FallImpactMinWeight"] = 0.5,
-	["LethalHP"] = 1.0,
-	["SpinningSpeed"] = 5.0,
-	["ItemWeightLight"] = 100.0,
-	["ItemWeightMedium"] = 1000.0,
-	["ItemWeightHeavy"] = 50000.0,
-	["WisdomTierHigh"] = 10.0,
-	["CoinPileMediumThreshold"] = 100.0,
-	["CoinPileBigThreshold"] = 500.0,
-	["DarknessHeightOffset"] = 0.10000000149012,
-	["DarknessGracePeriod"] = 0.20000000298023,
-	["DarknessGraceFrames"] = 6.0,
-	["SightConePreviewMaxDistanceFromPlayerSq"] = 900.0,
-	["SpellMoveFloodMaxSourceDistance"] = 9.0,
-	["UnarmedRange"] = 1.5,
-	["ActiveRollRerollInspirationCost"] = 1.0,
-	["PickpocketWeightSquaredThreshold"] = 250000.0,
-	["PickpocketPriceSquaredThreshold"] = 100.0,
-	["JoinAllyInCombatRadius"] = 7.0,
-	["AbilityMaxValue"] = 30.0,
-	["PassiveRollDelay"] = 0.40000000596046,
-	["PickpocketingMaxPrice"] = 1000.0,
-	["PickpocketingWeightModifierConstant"] = 0.20000000298023,
-	["PickpocketingPriceModifierConstant"] = 0.5,
-	["PickpocketingPriceDC"] = 20.0,
-	["PickpocketingMinimumDC"] = 5.0,
-	["FollowDistance"] = 70.0,
-	["SneakFollowDistance"] = 5.0,
-	["SeekHiddenRange"] = 3.0,
-	["SeekHiddenTimeout"] = 0.5,
-	["DamageTerrainOffset"] = 3.25,
-	["SurfaceOnMoveDistanceMultiplier"] = 1.0,
-	["SurfaceOnEnterDistanceMultiplier"] = 0.5,
-	["GameplayLightsFadeTime"] = 0.5,
-	["MaxPickingDistance"] = 30.0,
-	["LearnSpellCostPerLevel"] = 50.0,
-	["SavantLearnSpellCostPerLevel"] = 25.0,
-	["MaxShortRestPoints"] = 2.0,
-	["DualWieldingPlayersDefaultOn"] = 1.0,
-	["DualWieldingNPCsDefaultOn"] = 1.0,
-	["MaximumXPCap"] = 200000.0,
-	["CombatCameraEndDelay"] = 1.0,
-	["DamagingSurfacesThreshold"] = 35.0,
-	["FollowThroughDamagingSurfaceDistance"] = 20.0,
-	["CameraTakeControlTimer"] = 1.0,
-	["CameraEnableTakeControlOnEndTurn"] = 1.0,
-	["CombatCameraRangedAttackWait"] = 1.0,
-	["CCTurnPauseTime"] = 1.0,
-	["BaseSpellDifficultyCheck"] = 8.0,
-	["GlobalBaseACModifier"] = 0.0,
-	["RollStreamDialogDebtRange"] = 1.0,
-	["RollStreamPlayerSpellDebtRange"] = 1.0,
-	["RollStreamNPCSpellDebtRange"] = 1.0,
-	["RollStreamPlayerRandomCastDebtRange"] = 1.0,
-	["RollStreamNPCRandomCastDebtRange"] = 1.0,
-	["RollStreamSuccessDebtConsumeMultiplier"] = 2.0,
-	["RollStreamFailDebtConsumeMultiplier"] = 2.0,
-	["ContainerCloseDistance"] = 0.0099999997764826,
-	["CharacterInteractionHeightMin"] = 1.0,
-	["MaxPickUpMultiplier"] = 5.0,
-	["PointAndClickPostDelay"] = 0.10000000149012,
-	["PortraitClickSpamThreshold"] = 10.0,
-	["CombatCameraStatusEndTurnWait"] = 1.0,
-	["Disarm_MaxDistance"] = 4.0,
-	["Disarm_ThrowAngle"] = 100.0,
-	["Disarm_RandomConeAngle"] = 40.0,
-	["EncumberedMultiplier"] = 7.0,
-	["HeavilyEncumberedMultiplier"] = 9.0,
-	["CarryLimitMultiplier"] = 10.0,
-	["ShoveCurveConstant"] = 65.0,
-	["ShoveDistanceMax"] = 6.0,
-	["ShoveDistanceMin"] = 1.0,
-	["ShoveMultiplier"] = 12.0,
-	["DragCheckMultiplier"] = 12.0,
-	["DragCurveConstant"] = 65.0,
-	["DragDistanceMax"] = 6.0,
-	["ForceFunctorFallbackStrength"] = 10.0,
-	["ExhaustedRest_HealthPercent"] = 50.0,
-	["ExhaustedRest_ResourcePercent"] = 50.0,
-	["ActiveRollPartyNearbyDistance"] = 9.0,
-	["ActiveRollDisableIgnoreRange"] = 0.0,
-	["CannotActTimeout"] = 2.0,
-	["AutoSuccessCastingInActiveRoll"] = 1.0,
-	["SplatterDistanceThreshold"] = 120.0,
-	["SplatterDirtPerDistance"] = 0.10000000149012,
-	["SplatterBloodPerDistance"] = 0.20000000298023,
-	["SplatterBloodPerAttack"] = 0.10000000149012,
-	["SplatterMaxBloodLimit"] = 1.0,
-	["SplatterMaxDirtLimit"] = 0.89999997615814,
-	["SplatterSweatDelta"] = 0.10000000149012,
-	["PickupObjectMultiplier"] = 5.0,
-	["MoveObjectMultiplier"] = 12.0,
-	["MoveObjectRangeCheckMultiplier"] = 12.0,
-	["MoveObjectRangeCurveConstant"] = 65.0,
-	["MoveObjectRangeDistanceMax"] = 6.0,
-	["ReactTimeThreshold"] = 0.20000000298023,
-	["AISwarmMoveGroupMinDistance"] = 15.0,
-	["ScaleChangeSpeed"] = 0.5,
-	["SizeChangeWeightMultiplier"] = 2.3499999046326,
-	["PickpocketInteractionRange"] = 1.0,
-	["DangerousLevelGap"] = 2.0,
-	["FallMinDamagePathfindingCost"] = 1000.0,
-	["FallMaxDamagePathfindingCost"] = 2000.0,
-	["FallDeadPathfindingCost"] = 10000.0,
-	["PerformerZoneJoinRadius"] = 8.0,
-	["PerformerZoneSilenceRadius"] = 0.0,
-	["MaxPerformerZones"] = 4.0,
-	["PerformerZoneMaxPlayersByType"] = 4.0,
-	["FootstepMixdownTime"] = 10.0,
-	["FootstepMixWaitTime"] = 5.0,
-	["AmbienceMixDownDelayTime"] = 10.0,
-	["DefaultInstrumentStowedVisuals"] = 2.0,
-	["HoverStateMixLeaveDelayTime"] = 1.0,
-	["HoverStateMixEnterDelayTime"] = 2.0,
-	["Minimum SightRange When Calculating End Of Combat Range"] = 12.0,
-	["InterruptZoneRange"] = 23.0,
-	["CameraFlyingZoomDistanceExtra"] = 10.0,
-	["CameraFlyingZoomDistanceRemap"] = 0.5,
-	["InterruptNearbyDistance"] = 18.0,
-	["PingCooldownTime"] = 2.0,
-	["SoundFootstepGroupMinSize"] = 3.0,
-	["SoundFootstepGroupMaxRadius"] = 8.0,
-	["SoundFootstepGroupBoundRadius"] = 0.5,
-	["PingMarkerLifeTime"] = 4.0,
-	["EscortStragglerDistance"] = 10.0,
-	["DefaultUnifiedTutorialsLifeTime"] = 12000.0,
-	["ForceFunctorConeAngle"] = 30.0,
-	["SplitScreenMaxSoundListenerDistance"] = 20.0,
-	["TutorialHotbarSlotRemovedTimeout"] = 2.0,
-	["CamListener_DistPercentFromCam_Close"] = 0.0,
-	["CamListener_DistPercentFromCam_Medium"] = 70.0,
-	["CamListener_DistPercentFromCam_Far"] = 40.0,
-	["CamListener_ZoomOut_Close"] = 0.0,
-	["CamListener_ZoomOut_Medium"] = 0.40000000596046,
-	["CamListener_ZoomOut_Far"] = 0.60000002384186,
-	["InitiativeDie"] = 4.0,
-	["PassiveSkillScoreAdvMod"] = 5.0,
-	["TransferredEvidenceOnGroundRadius"] = 8.0,
-	["PointLightVerticalLimit"] = 2.5,
-	["CombatCameraDeathAnimationWait"] = 2.0,
-	["MoveToTargetCloseEnoughMin"] = 0.5,
-	["MoveToTargetCloseEnoughMax"] = 3.5,
-	["DialogInstanceFlagRange"] = 10.0,
-	["Level1"] = 300.0,
-	["Level10"] = 20000.0,
-	["Level11"] = 24000.0,
-	["Level12"] = 30000.0,
-	["Level2"] = 600.0,
-	["Level3"] = 1800.0,
-	["Level4"] = 3800.0,
-	["Level5"] = 6500.0,
-	["Level6"] = 8000.0,
-	["Level7"] = 9000.0,
-	["Level8"] = 12000.0,
-	["Level9"] = 14000.0,
-	["MaxXPLevel"] = 12.0,
+    ["NPC max combat turn time"] = 20.0,
+    ["ThrowDistanceMin"] = 3.0,
+    ["ThrowDistanceMax"] = 18.0,
+    ["ThrowStrengthCapMultiplier"] = 0.20000000298023,
+    ["ThrowWeightMultiplier"] = 2.0,
+    ["Telekinesis Range"] = 4.0,
+    ["End Of Combat SightRange Multiplier"] = 3.0,
+    ["Sneak Damage Multiplier"] = 1.0,
+    ["Infectious Disease Depth"] = 5.0,
+    ["Infectious Disease Radius"] = 5.0,
+    ["Haste Speed Modifier"] = 1.5,
+    ["Slow Speed Modifier"] = 0.80000001192093,
+    ["Ally Joins Ally SightRange Multiplier"] = 2.5,
+    ["Surface Distance Evaluation"] = 2.0,
+    ["Once Per Combat Spell Realtime Cooldown"] = 1.0,
+    ["HintDuration"] = 5.0,
+    ["Projectile Terrain Offset"] = 3.0,
+    ["Surface Clear Owner Time"] = 1.0,
+    ["Decaying Touch Damage Modifier"] = 1.0,
+    ["FirstItemTypeShift"] = 9.0,
+    ["SecondItemTypeShift"] = 16.0,
+    ["PickpocketGoldValuePerPoint"] = 50.0,
+    ["PickpocketWeightPerPoint"] = 2000.0,
+    ["PickpocketExperienceLevelsPerPoint"] = 4.0,
+    ["PersuasionAttitudeBonusPerPoint"] = 5.0,
+    ["AbilityBaseValue"] = 10.0,
+    ["AbilityCharCreationBonus"] = 1.0,
+    ["AbilityLevelGrowth"] = 0.0,
+    ["AbilityBoostGrowth"] = 0.0,
+    ["AbilityGrowthDamp"] = 0.0,
+    ["AbilitySoftCap"] = 40.0,
+    ["WitsGrowthDamp"] = 0.0,
+    ["VitalityStartingAmount"] = 21.0,
+    ["VitalityExponentialGrowth"] = 1.25,
+    ["VitalityLinearGrowth"] = 9.0909996032715,
+    ["VitalityToDamageRatio"] = 5.0,
+    ["VitalityToDamageRatioGrowth"] = 0.20000000298023,
+    ["ExpectedDamageBoostFromAbilityPerLevel"] = 0.064999997615814,
+    ["ExpectedDamageBoostFromSpellSchoolPerLevel"] = 0.014999999664724,
+    ["ExpectedDamageBoostFromWeaponSkillPerLevel"] = 0.025000000372529,
+    ["ExpectedConGrowthForArmorCalculation"] = 1.0,
+    ["FirstVitalityLeapLevel"] = 9.0,
+    ["FirstVitalityLeapGrowth"] = 1.25,
+    ["SecondVitalityLeapLevel"] = 13.0,
+    ["SecondVitalityLeapGrowth"] = 1.25,
+    ["ThirdVitalityLeapLevel"] = 16.0,
+    ["ThirdVitalityLeapGrowth"] = 1.25,
+    ["FourthVitalityLeapLevel"] = 18.0,
+    ["FourthVitalityLeapGrowth"] = 1.3500000238419,
+    ["DamageBoostFromAbility"] = 0.050000000745058,
+    ["MonsterDamageBoostPerLevel"] = 0.019999999552965,
+    ["PhysicalArmourBoostFromAbility"] = 0.0,
+    ["MagicArmourBoostFromAbility"] = 0.0,
+    ["VitalityBoostFromAbility"] = 0.070000000298023,
+    ["DodgingBoostFromAbility"] = 0.0,
+    ["HealToDamageRatio"] = 1.2999999523163,
+    ["ArmorToVitalityRatio"] = 0.55000001192093,
+    ["ArmorRegenTimer"] = 0.0099999997764826,
+    ["ArmorRegenConstGrowth"] = 1.0,
+    ["ArmorRegenPercentageGrowth"] = 10.0,
+    ["ArmorAfterHitCooldown"] = -7.0,
+    ["MagicArmorRegenTimer"] = 0.0099999997764826,
+    ["MagicArmorRegenConstGrowth"] = 1.0,
+    ["MagicArmorRegenPercentageGrowth"] = 10.0,
+    ["MagicArmorAfterHitCooldown"] = -7.0,
+    ["ArmorHeadPercentage"] = 0.15000000596046,
+    ["ArmorUpperBodyPercentage"] = 0.30000001192093,
+    ["ArmorLowerBodyPercentage"] = 0.20000000298023,
+    ["ArmorShieldPercentage"] = 0.5,
+    ["ArmorHandsPercentage"] = 0.15000000596046,
+    ["ArmorFeetPercentage"] = 0.15000000596046,
+    ["ArmorAmuletPercentage"] = 0.11999999731779,
+    ["ArmorRingPercentage"] = 0.079999998211861,
+    ["CharacterBaseMemoryCapacity"] = 100.0,
+    ["CharacterBaseMemoryCapacityGrowth"] = 0.5,
+    ["CharacterAbilityPointsPerMemoryCapacity"] = 1.0,
+    ["CombatSkillCap"] = 10.0,
+    ["CombatSkillLevelGrowth"] = 100.0,
+    ["CombatSkillNpcGrowth"] = 0.0,
+    ["CombatSkillDamageBonus"] = 5.0,
+    ["CombatSkillCritBonus"] = 1.0,
+    ["CombatSkillCritMultiplierBonus"] = 5.0,
+    ["CombatSkillAccuracyBonus"] = 5.0,
+    ["CombatSkillDodgingBonus"] = 1.0,
+    ["CombatSkillReflectionBonus"] = 5.0,
+    ["NumStartingCivilSkillPoints"] = 2.0,
+    ["CivilSkillCap"] = 5.0,
+    ["CivilSkillLevelGrowth"] = 100.0,
+    ["CivilPointOffset"] = 0.0,
+    ["SavethrowLowChance"] = 15.0,
+    ["SavethrowHighChance"] = 50.0,
+    ["SavethrowBelowLowPenalty"] = 5.0,
+    ["SavethrowPenaltyCap"] = -30.0,
+    ["CriticalBonusFromWits"] = 1.0,
+    ["InitiativeBonusFromWits"] = 1.0,
+    ["WeaponAccuracyPenaltyPerLevel"] = -20.0,
+    ["WeaponAccuracyPenaltyCap"] = -80.0,
+    ["ShieldAPCost"] = 0.0,
+    ["WeaponWeightLight"] = 500.0,
+    ["WeaponWeightMedium"] = 1050.0,
+    ["WeaponWeightHeavy"] = 2600.0,
+    ["WeaponWeightGiant"] = 8200.0,
+    ["HighGroundThreshold"] = 2.2999999523163,
+    ["LowGroundAttackRollPenalty"] = -2.0,
+    ["HighGroundAttackRollBonus"] = 2.0,
+    ["LowGroundMeleeRange"] = 0.0,
+    ["HighGroundMeleeRange"] = 0.5,
+    ["HighGroundRangeMultiplier"] = 1.0,
+    ["SneakDefaultAPCost"] = 1.0,
+    ["BlindRangePenalty"] = 3.0,
+    ["RangeBoostedGlobalCap"] = 30.0,
+    ["SurfaceDurationFromHitFloorReaction"] = 18.0,
+    ["SurfaceDurationFireIgniteOverride"] = 12.0,
+    ["SurfaceDurationFromCharacterBleeding"] = -1.0,
+    ["SurfaceDurationAfterDecay"] = -1.0,
+    ["SmokeDurationAfterDecay"] = 6.0,
+    ["DualWieldingAPPenalty"] = 2.0,
+    ["DualWieldingDamagePenalty"] = 0.5,
+    ["ChanceToSetStatusOnContact"] = 100.0,
+    ["SkillPhysArmorBonusBase"] = 5.0,
+    ["SkillPhysArmorBonusPerPoint"] = 2.0,
+    ["SkillPhysArmorBonusMax"] = 5.0,
+    ["SkillMagicArmorBonusBase"] = 5.0,
+    ["SkillMagicArmorBonusPerPoint"] = 2.0,
+    ["SkillMagicArmorBonusMax"] = 5.0,
+    ["SkillVitalityBonusBase"] = 3.0,
+    ["SkillVitalityBonusPerPoint"] = 1.0,
+    ["SkillVitalityBonusMax"] = 3.0,
+    ["SpellSchoolDamageToPhysicalArmorPerPoint"] = 0.0,
+    ["SpellSchoolDamageToMagicArmorPerPoint"] = 0.0,
+    ["SpellSchoolArmorRestoredPerPoint"] = 5.0,
+    ["SpellSchoolVitalityRestoredPerPoint"] = 5.0,
+    ["SpellSchoolHighGroundBonusPerPoint"] = 5.0,
+    ["SpellSchoolFireDamageBoostPerPoint"] = 5.0,
+    ["SpellSchoolPoisonAndEarthDamageBoostPerPoint"] = 5.0,
+    ["SpellSchoolAirDamageBoostPerPoint"] = 5.0,
+    ["SpellSchoolWaterDamageBoostPerPoint"] = 5.0,
+    ["SpellSchoolPhysicalDamageBoostPerPoint"] = 5.0,
+    ["SpellSchoolSulfuricDamageBoostPerPoint"] = 5.0,
+    ["SpellSchoolLifeStealPerPoint"] = 10.0,
+    ["SpiritVisionFallbackRadius"] = 10.0,
+    ["AiCoverProjectileTurnMemory"] = 2.0,
+    ["CarryWeightBase"] = 40.0,
+    ["CarryWeightPerStr"] = 10000.0,
+    ["DeflectProjectileRange"] = 1.0,
+    ["CleaveRangeOverride"] = 125.0,
+    ["FleeDistance"] = 13.0,
+    ["GlobalGoldValueMultiplier"] = 1.0,
+    ["PriceBarterCoefficient"] = 0.10000000149012,
+    ["PriceAttitudeCoefficient"] = 0.0049999998882413,
+    ["PriceRoundToFiveAfterAmount"] = 100.0,
+    ["PriceRoundToTenAfterAmount"] = 1000.0,
+    ["GMCharacterAbilityCap"] = 100.0,
+    ["GMCharacterArmorCap"] = 999999.0,
+    ["GMCharacterResistanceMin"] = -1000.0,
+    ["GMCharacterResistanceMax"] = 1000.0,
+    ["GMCharacterAPCap"] = 100.0,
+    ["GMCharacterSPCap"] = 3.0,
+    ["GMItemLevelCap"] = 50.0,
+    ["GMItemAbilityCap"] = 100.0,
+    ["GMItemArmorMin"] = -999999.0,
+    ["GMItemArmorMax"] = 999999.0,
+    ["GMItemResistanceMin"] = -1000.0,
+    ["GMItemResistanceMax"] = 1000.0,
+    ["TraderDroppedItemsPercentage"] = 51.0,
+    ["TraderDroppedItemsCap"] = 3.0,
+    ["TraderDonationsRequiredAttitude"] = -45.0,
+    ["TeleportUnchainDistance"] = 50.0,
+    ["FlankingElevationThreshold"] = 1.2000000476837,
+    ["DefaultDC"] = 15.0,
+    ["FallDamageBaseDamage"] = 0.0099999997764826,
+    ["FallDamageMinimumDistance"] = 4.0,
+    ["FallDamageMaximumDistance"] = 21.0,
+    ["FallDamageDamageType"] = 3.0,
+    ["FallDamagePronePercent"] = 0.25,
+    ["FallDamageMultiplierHugeGargantuan"] = 2.0,
+    ["FallImpactPushDistance"] = 2.0,
+    ["FallImpactConstant"] = 4.9999998736894e-06,
+    ["FallImpactMinWeight"] = 0.5,
+    ["LethalHP"] = 1.0,
+    ["SpinningSpeed"] = 5.0,
+    ["ItemWeightLight"] = 100.0,
+    ["ItemWeightMedium"] = 1000.0,
+    ["ItemWeightHeavy"] = 50000.0,
+    ["WisdomTierHigh"] = 10.0,
+    ["CoinPileMediumThreshold"] = 100.0,
+    ["CoinPileBigThreshold"] = 500.0,
+    ["DarknessHeightOffset"] = 0.10000000149012,
+    ["DarknessGracePeriod"] = 0.20000000298023,
+    ["DarknessGraceFrames"] = 6.0,
+    ["SightConePreviewMaxDistanceFromPlayerSq"] = 900.0,
+    ["SpellMoveFloodMaxSourceDistance"] = 9.0,
+    ["UnarmedRange"] = 1.5,
+    ["ActiveRollRerollInspirationCost"] = 1.0,
+    ["PickpocketWeightSquaredThreshold"] = 250000.0,
+    ["PickpocketPriceSquaredThreshold"] = 100.0,
+    ["JoinAllyInCombatRadius"] = 7.0,
+    ["AbilityMaxValue"] = 30.0,
+    ["PassiveRollDelay"] = 0.40000000596046,
+    ["PickpocketingMaxPrice"] = 1000.0,
+    ["PickpocketingWeightModifierConstant"] = 0.20000000298023,
+    ["PickpocketingPriceModifierConstant"] = 0.5,
+    ["PickpocketingPriceDC"] = 20.0,
+    ["PickpocketingMinimumDC"] = 5.0,
+    ["FollowDistance"] = 70.0,
+    ["SneakFollowDistance"] = 5.0,
+    ["SeekHiddenRange"] = 3.0,
+    ["SeekHiddenTimeout"] = 0.5,
+    ["DamageTerrainOffset"] = 3.25,
+    ["SurfaceOnMoveDistanceMultiplier"] = 1.0,
+    ["SurfaceOnEnterDistanceMultiplier"] = 0.5,
+    ["GameplayLightsFadeTime"] = 0.5,
+    ["MaxPickingDistance"] = 30.0,
+    ["LearnSpellCostPerLevel"] = 50.0,
+    ["SavantLearnSpellCostPerLevel"] = 25.0,
+    ["MaxShortRestPoints"] = 2.0,
+    ["DualWieldingPlayersDefaultOn"] = 1.0,
+    ["DualWieldingNPCsDefaultOn"] = 1.0,
+    ["MaximumXPCap"] = 200000.0,
+    ["CombatCameraEndDelay"] = 1.0,
+    ["DamagingSurfacesThreshold"] = 35.0,
+    ["FollowThroughDamagingSurfaceDistance"] = 20.0,
+    ["CameraTakeControlTimer"] = 1.0,
+    ["CameraEnableTakeControlOnEndTurn"] = 1.0,
+    ["CombatCameraRangedAttackWait"] = 1.0,
+    ["CCTurnPauseTime"] = 1.0,
+    ["BaseSpellDifficultyCheck"] = 8.0,
+    ["GlobalBaseACModifier"] = 0.0,
+    ["RollStreamDialogDebtRange"] = 1.0,
+    ["RollStreamPlayerSpellDebtRange"] = 1.0,
+    ["RollStreamNPCSpellDebtRange"] = 1.0,
+    ["RollStreamPlayerRandomCastDebtRange"] = 1.0,
+    ["RollStreamNPCRandomCastDebtRange"] = 1.0,
+    ["RollStreamSuccessDebtConsumeMultiplier"] = 2.0,
+    ["RollStreamFailDebtConsumeMultiplier"] = 2.0,
+    ["ContainerCloseDistance"] = 0.0099999997764826,
+    ["CharacterInteractionHeightMin"] = 1.0,
+    ["MaxPickUpMultiplier"] = 5.0,
+    ["PointAndClickPostDelay"] = 0.10000000149012,
+    ["PortraitClickSpamThreshold"] = 10.0,
+    ["CombatCameraStatusEndTurnWait"] = 1.0,
+    ["Disarm_MaxDistance"] = 4.0,
+    ["Disarm_ThrowAngle"] = 100.0,
+    ["Disarm_RandomConeAngle"] = 40.0,
+    ["EncumberedMultiplier"] = 7.0,
+    ["HeavilyEncumberedMultiplier"] = 9.0,
+    ["CarryLimitMultiplier"] = 10.0,
+    ["ShoveCurveConstant"] = 65.0,
+    ["ShoveDistanceMax"] = 6.0,
+    ["ShoveDistanceMin"] = 1.0,
+    ["ShoveMultiplier"] = 12.0,
+    ["DragCheckMultiplier"] = 12.0,
+    ["DragCurveConstant"] = 65.0,
+    ["DragDistanceMax"] = 6.0,
+    ["ForceFunctorFallbackStrength"] = 10.0,
+    ["ExhaustedRest_HealthPercent"] = 50.0,
+    ["ExhaustedRest_ResourcePercent"] = 50.0,
+    ["ActiveRollPartyNearbyDistance"] = 9.0,
+    ["ActiveRollDisableIgnoreRange"] = 0.0,
+    ["CannotActTimeout"] = 2.0,
+    ["AutoSuccessCastingInActiveRoll"] = 1.0,
+    ["SplatterDistanceThreshold"] = 120.0,
+    ["SplatterDirtPerDistance"] = 0.10000000149012,
+    ["SplatterBloodPerDistance"] = 0.20000000298023,
+    ["SplatterBloodPerAttack"] = 0.10000000149012,
+    ["SplatterMaxBloodLimit"] = 1.0,
+    ["SplatterMaxDirtLimit"] = 0.89999997615814,
+    ["SplatterSweatDelta"] = 0.10000000149012,
+    ["PickupObjectMultiplier"] = 5.0,
+    ["MoveObjectMultiplier"] = 12.0,
+    ["MoveObjectRangeCheckMultiplier"] = 12.0,
+    ["MoveObjectRangeCurveConstant"] = 65.0,
+    ["MoveObjectRangeDistanceMax"] = 6.0,
+    ["ReactTimeThreshold"] = 0.20000000298023,
+    ["AISwarmMoveGroupMinDistance"] = 15.0,
+    ["ScaleChangeSpeed"] = 0.5,
+    ["SizeChangeWeightMultiplier"] = 2.3499999046326,
+    ["PickpocketInteractionRange"] = 1.0,
+    ["DangerousLevelGap"] = 2.0,
+    ["FallMinDamagePathfindingCost"] = 1000.0,
+    ["FallMaxDamagePathfindingCost"] = 2000.0,
+    ["FallDeadPathfindingCost"] = 10000.0,
+    ["PerformerZoneJoinRadius"] = 8.0,
+    ["PerformerZoneSilenceRadius"] = 0.0,
+    ["MaxPerformerZones"] = 4.0,
+    ["PerformerZoneMaxPlayersByType"] = 4.0,
+    ["FootstepMixdownTime"] = 10.0,
+    ["FootstepMixWaitTime"] = 5.0,
+    ["AmbienceMixDownDelayTime"] = 10.0,
+    ["DefaultInstrumentStowedVisuals"] = 2.0,
+    ["HoverStateMixLeaveDelayTime"] = 1.0,
+    ["HoverStateMixEnterDelayTime"] = 2.0,
+    ["Minimum SightRange When Calculating End Of Combat Range"] = 12.0,
+    ["InterruptZoneRange"] = 23.0,
+    ["CameraFlyingZoomDistanceExtra"] = 10.0,
+    ["CameraFlyingZoomDistanceRemap"] = 0.5,
+    ["InterruptNearbyDistance"] = 18.0,
+    ["PingCooldownTime"] = 2.0,
+    ["SoundFootstepGroupMinSize"] = 3.0,
+    ["SoundFootstepGroupMaxRadius"] = 8.0,
+    ["SoundFootstepGroupBoundRadius"] = 0.5,
+    ["PingMarkerLifeTime"] = 4.0,
+    ["EscortStragglerDistance"] = 10.0,
+    ["DefaultUnifiedTutorialsLifeTime"] = 12000.0,
+    ["ForceFunctorConeAngle"] = 30.0,
+    ["SplitScreenMaxSoundListenerDistance"] = 20.0,
+    ["TutorialHotbarSlotRemovedTimeout"] = 2.0,
+    ["CamListener_DistPercentFromCam_Close"] = 0.0,
+    ["CamListener_DistPercentFromCam_Medium"] = 70.0,
+    ["CamListener_DistPercentFromCam_Far"] = 40.0,
+    ["CamListener_ZoomOut_Close"] = 0.0,
+    ["CamListener_ZoomOut_Medium"] = 0.40000000596046,
+    ["CamListener_ZoomOut_Far"] = 0.60000002384186,
+    ["InitiativeDie"] = 4.0,
+    ["PassiveSkillScoreAdvMod"] = 5.0,
+    ["TransferredEvidenceOnGroundRadius"] = 8.0,
+    ["PointLightVerticalLimit"] = 2.5,
+    ["CombatCameraDeathAnimationWait"] = 2.0,
+    ["MoveToTargetCloseEnoughMin"] = 0.5,
+    ["MoveToTargetCloseEnoughMax"] = 3.5,
+    ["DialogInstanceFlagRange"] = 10.0,
+    ["Level1"] = 300.0,
+    ["Level10"] = 20000.0,
+    ["Level11"] = 24000.0,
+    ["Level12"] = 30000.0,
+    ["Level2"] = 600.0,
+    ["Level3"] = 1800.0,
+    ["Level4"] = 3800.0,
+    ["Level5"] = 6500.0,
+    ["Level6"] = 8000.0,
+    ["Level7"] = 9000.0,
+    ["Level8"] = 12000.0,
+    ["Level9"] = 14000.0,
+    ["MaxXPLevel"] = 12.0,
 }
 
 --#endregion
-
