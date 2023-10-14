@@ -14,13 +14,14 @@ PersistentVars = {}
 
 --- @alias OsirisValue number|string
 
---- @class OsiDatabase
 --- Using a DB like a function will allow inserting new values into the database (ex. `Osi.DB_IsPlayer("02a77f1f-872b-49ca-91ab-32098c443beb")`
+--- @overload fun(...:OsirisValue|nil)
+--- @type OsiDatabase
+local OsiDatabase = {}
 --- Databases can be read using the Get method. The method checks its parameters against the database and only returns rows that match the query.
 --- The number of parameters passed to Get must be equivalent to the number of columns in the target database.
 --- Each parameter defines an (optional) filter on the corresponding column.
 --- If the parameter is nil, the column is not filtered (equivalent to passing _ in Osiris). If the parameter is not nil, only rows with matching values will be returned.
---- @overload fun(...:OsirisValue|nil)
 --- @vararg OsirisValue|nil
 --- @return table<integer,table<integer,OsirisValue>>
 function OsiDatabase:Get(...) end
