@@ -4875,7 +4875,7 @@ Osi = {}
 --- @field SpellId FixedString
 
 
---- @class Ext_Debug
+--- @type Ext_Debug
 --- @field Crash fun(a1:int32)
 --- @field DebugBreak fun()
 --- @field DebugDumpLifetimes fun()
@@ -4886,7 +4886,7 @@ local Ext_Debug = {}
 
 
 
---- @class Ext_Entity
+--- @type Ext_Entity
 --- @field Get fun(a1:Guid)
 --- @field GetAllEntities fun():EntityHandle[]
 --- @field GetAllEntitiesWithComponent fun(a1:ExtComponentType):EntityHandle[]
@@ -4897,7 +4897,7 @@ local Ext_Entity = {}
 
 
 
---- @class Ext_IO
+--- @type Ext_IO
 --- @field AddPathOverride fun(a1:string, a2:string)
 --- @field GetPathOverride fun(a1:string)
 --- @field LoadFile fun(a1:string)
@@ -4906,7 +4906,7 @@ local Ext_IO = {}
 
 
 
---- @class Ext_Json
+--- @class type
 --- @field Parse fun()
 --- @field Stringify fun()
 local Ext_Json = {}
@@ -4921,7 +4921,7 @@ local Ext_Json = {}
 
 
 
---- @class Ext_Math
+--- @type Ext_Math
 --- @field Acos fun(a1:number):number
 --- @field Add fun()
 --- @field Angle fun()
@@ -4969,7 +4969,7 @@ local Ext_Math = {}
 
 
 
---- @class Ext_Mod
+--- @type Ext_Mod
 --- @field GetBaseMod fun():Module
 --- @field GetLoadOrder fun()
 --- @field GetMod fun(a1:string):Module
@@ -4979,7 +4979,7 @@ local Ext_Mod = {}
 
 
 
---- @class Ext_Resource
+--- @type Ext_Resource
 --- @field Get fun(a1:FixedString, a2:ResourceBankType):Resource
 --- @field GetAll fun(a1:ResourceBankType):FixedString[]
 local Ext_Resource = {}
@@ -4992,7 +4992,7 @@ local Ext_Resource = {}
 local Ext_StaticData = {}
 
 
---- @class Ext_Stats
+--- @type Ext_Stats
 --- @field TreasureCategory Ext_StatsTreasureCategory
 --- @field TreasureTable Ext_StatsTreasureTable
 --- @field AddAttribute fun(modifierList:FixedString, modifierName:FixedString, typeName:FixedString):boolean
@@ -5011,14 +5011,14 @@ local Ext_Stats = {}
 
 
 
---- @class Ext_StatsTreasureCategory
+--- @type Ext_StatsTreasureCategory
 --- @field GetLegacy fun(id:FixedString):StatTreasureCategory
 --- @field Update fun(id:FixedString, tbl:StatTreasureCategory)
 local Ext_StatsTreasureCategory = {}
 
 
 
---- @class Ext_StatsTreasureTable
+--- @type Ext_StatsTreasureTable
 --- @field Get fun(a1:FixedString):StatsTreasureTable
 --- @field GetLegacy fun(id:FixedString):StatTreasureTable
 --- @field Update fun(tbl:StatTreasureTable)
@@ -5026,7 +5026,7 @@ local Ext_StatsTreasureTable = {}
 
 
 
---- @class Ext_Types
+--- @type Ext_Types
 --- @field Construct fun(a1:FixedString)
 --- @field GetAllTypes fun():FixedString[]
 --- @field GetObjectType fun()
@@ -5072,7 +5072,7 @@ function Ext_Types.GenerateIdeHelpers(outputPath, addOsi) end
 --- @field SyncOnWrite boolean Client-server sync is performed immediately when the variable is written. This is disabled by default for performance reasons.
 --- @field DontCache boolean Disable Lua caching of variable values.<br>See here: https://github.com/Norbyte/ositools/blob/master/Docs/ReleaseNotesv58.md#caching-behavior
 
---- @class Ext_Utils
+--- @type Ext_Utils
 --- @field GameVersion fun()
 --- @field GetCommandLineParams fun():string[]
 --- @field GetGlobalSwitches fun():GlobalSwitches
@@ -5122,13 +5122,13 @@ local Ext_Utils = {}
 
 --#region Generated Enums
 
---- @class Ext_Enums
+--- @type Ext_Enums
 local Ext_Enums = {}
 
 
 --#endregion
 
---- @class Ext
+--- @type Ext
 --- @field Debug Ext_Debug
 --- @field Entity Ext_Entity
 --- @field IO Ext_IO
@@ -5345,7 +5345,7 @@ function Ext.ExecuteSurfaceAction(action) end
 --- @param actionHandle integer Action to cancel
 function Ext.CancelSurfaceAction(actionHandle) end
 
---- @class ItemDefinition
+--- @type ItemDefinition
 --- @field RootTemplate FixedString
 --- @field OriginalRootTemplate FixedString
 --- @field Slot integer
@@ -5386,7 +5386,7 @@ function ItemDefinition:ResetProgression() end
 --- Item definitions can be accessed using c[1], c[2], etc.
 --- For non-recursive item cloning (i.e. creating a single item), there is only one item (c[1]).
 --- For container cloning, the contained items are accessible using c[2], c[3], etc.
---- @class ItemConstructorBase
+--- @type ItemConstructorBase
 local ItemConstructorBase = {}
 
 --- Constructs an instance of the item contained in the constructor definition.
