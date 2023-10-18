@@ -30,53 +30,53 @@ parser.add_argument("-s", help="use this if you will be using script extender.",
 args = parser.parse_args()
 
 modname: str = args.name
-folder = modname.replace(" ", "_")
+folder_name = modname.replace(" ", "_")
 dest: str = args.dest
 
 if not os.path.isdir(args.dest):
     raise ArgumentError("dest", "Invalid destination.")
 
 try:
-    os.mkdir(os.path.join(dest, folder))
+    os.mkdir(os.path.join(dest, folder_name))
 except FileExistsError:
-    print(f"Folder already exists with name: {folder}.")
+    print(f"Folder already exists with name: {folder_name}.")
     exit()
 except FileNotFoundError:
     print(f"Could not find destination directory: {dest}")
     exit()
 
-os.chdir(os.path.join(dest, folder))
+os.chdir(os.path.join(dest, folder_name))
 
 print(os.getcwd())
 
 os.makedirs("./Localization/English")
-createTemplate(f"./Localization/English/{modname}.loca.xml", locatemplate.template())
+createTemplate(f"./Localization/English/{folder_name}.loca.xml", locatemplate.template())
 
-os.makedirs(f"./Mods/{folder}")
-createTemplate(f"./Mods/{folder}/meta.lsx", metalsx.template(modname, folder))
+os.makedirs(f"./Mods/{folder_name}")
+createTemplate(f"./Mods/{folder_name}/meta.lsx", metalsx.template(modname, folder_name))
 
-os.makedirs(f"./Public/{folder}")
+os.makedirs(f"./Public/{folder_name}")
 
 if args.i is True:
     os.makedirs("./Public/Game/GUI/Assets/Tooltips/ItemIcons")
     os.makedirs("./Public/Game/GUI/Assets/Tooltips/Icons")
-    os.makedirs(f"./Public/{folder}/Assets/Textures/Icons")
-    os.makedirs(f"./Public/{folder}/Content/UI/[PAK]_UI")
-    os.makedirs(f"./Public/{folder}/GUI/")
-    createTemplate(f"./Public/{folder}/GUI/Icons_Items.lsx", icon_itemslsx.template())
-    createTemplate(f"./Public/{folder}/Content/UI/[PAK]_UI/merged.lsf.lsx", icontexturebanklsx.template())
+    os.makedirs(f"./Public/{folder_name}/Assets/Textures/Icons")
+    os.makedirs(f"./Public/{folder_name}/Content/UI/[PAK]_UI")
+    os.makedirs(f"./Public/{folder_name}/GUI/")
+    createTemplate(f"./Public/{folder_name}/GUI/Icons_Items.lsx", icon_itemslsx.template())
+    createTemplate(f"./Public/{folder_name}/Content/UI/[PAK]_UI/merged.lsf.lsx", icontexturebanklsx.template())
 
 if args.t is True:
     os.makedirs(os.path.join(os.getcwd(), "Generated/Public/Shared/Assets"))
-    os.makedirs(f"./Public/{folder}/Content/Assets/")
-    createTemplate(f"./Public/{folder}/Content/Assets/templatevisuals.lsx", visuallsx.template())
+    os.makedirs(f"./Public/{folder_name}/Content/Assets/")
+    createTemplate(f"./Public/{folder_name}/Content/Assets/templatevisuals.lsx", visuallsx.template())
 
 if args.s is True:
-    os.makedirs(f"./Mods/{folder}/ScriptExtender/Lua")
-    createFile(f"./Mods/{folder}/ScriptExtender/Config.json")
-    createFile(f"./Mods/{folder}/ScriptExtender/Lua/BootstrapServer.lua")
-    createFile(f"./Mods/{folder}/ScriptExtender/Lua/BootstrapClient.lua")
+    os.makedirs(f"./Mods/{folder_name}/ScriptExtender/Lua")
+    createFile(f"./Mods/{folder_name}/ScriptExtender/Config.json")
+    createFile(f"./Mods/{folder_name}/ScriptExtender/Lua/BootstrapServer.lua")
+    createFile(f"./Mods/{folder_name}/ScriptExtender/Lua/BootstrapClient.lua")
 
-os.mkdir(f"./Public/{folder}/RootTemplates")
-os.makedirs(f"./Public/{folder}/Stats/Generated/Data")
-createTemplate(f"./Public/{folder}/RootTemplates/merged.lsf.lsx", roottemplatelsx.template())
+os.mkdir(f"./Public/{folder_name}/RootTemplates")
+os.makedirs(f"./Public/{folder_name}/Stats/Generated/Data")
+createTemplate(f"./Public/{folder_name}/RootTemplates/merged.lsf.lsx", roottemplatelsx.template())
