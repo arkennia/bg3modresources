@@ -38,7 +38,7 @@ Created by AnteMax to showcase how to make equipment and weapons, with both vani
 Created by AnteMax to showcase how to make equipment with 3D edited assets. Note that while they have been edited, it is still using BG3 meshes/models.
 
 # Guides
-[Getting Started](/bg3modresources/creating/guides/getting_started)
+[Getting Started](/bg3modresources/creating/guides/getting_started)  
 A simple WIP guide by me for getting into modding this ~~hell~~ game.  
   
 [Building a Class Mod](https://github.com/BG3-Community-Library-Team/BG3-Community-Library/wiki/Building-a-Class-Mod)  
